@@ -30,6 +30,15 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
+          // light: "#FFF4D1", // Softer, warmer light shade
+          // lightgray: "#F3E3BF", // Slightly deeper cream for contrast
+          // gray: "#B1BCA0", // Gentler green-gray for cohesion
+          // darkgray: "#5A5A5A", // A subtle deep gray with a neutral tone
+          // dark: "#5B3A2A", // A slightly warmer dark brown
+          // secondary: "#1D4052", // A muted teal for depth
+          // tertiary: "#799B93", // Softened cool green for balance
+          // highlight: "rgba(130, 150, 160, 0.15)", // Adjusted for subtler blending
+          // textHighlight: "#FFE94C88", // Softer yellow highlight with better readability
           light: "#faf8f8",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
@@ -41,6 +50,7 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
+          
           light: "#161618",
           lightgray: "#393639",
           gray: "#646464",
@@ -57,9 +67,9 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
-      Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
-      }),
+      // Plugin.CreatedModifiedDate({
+      //   priority: ["frontmatter", "filesystem"],
+      // }),
       Plugin.SyntaxHighlighting({
         theme: {
           light: "github-light",

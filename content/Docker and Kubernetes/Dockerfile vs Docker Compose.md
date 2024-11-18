@@ -1,2 +1,0 @@
-- **Dockerfile**: Builds a single image for one container.
-- **Docker Compose**: Manages multiple containers (services) as a group.

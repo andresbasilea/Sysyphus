@@ -1,0 +1,12 @@
+
+
+| Service                                  | Description                                                                                                                                                           | Name in other platforms |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| AWS EC2 Elastic Compute Cloud            | Compute capacity. Deploy applications without the need to invest in hardware upfront.                                                                                 |                         |
+| Amazon RDS (Relational Database Service) | Postgre, MySQL and other database engines provisioned managed service.                                                                                                |                         |
+| Amazon S3                                | Object storage                                                                                                                                                        |                         |
+| Amazon Lambda                            | Permits you to run code without owning or managing servers. Pay only for compute time consumed.                                                                       |                         |
+| Amazon Kinesis                           | Data Stream Processing. Fully managed streaming applications.                                                                                                         |                         |
+| Dynamo DB                                | Document database with key-valued structuring.                                                                                                                        |                         |
+| Amazon Athena                            | Straightforward analysis of data stored in S3 by using SQL.                                                                                                           |                         |
+| AWS Glue                                 | Serverless data integration service that makes it easier to prepare and move data from different sources for analytics, machine learning and application development. |                         |

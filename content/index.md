@@ -1,6 +1,5 @@
 ---
-title: Welcome to Quartz
+title: A Journal by Andrés Basile
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+![[image1 1.png]]

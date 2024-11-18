@@ -2,5 +2,5 @@
 title: A Journal by Andrés Basile
 ---
 
-![[image1 1.png]]
+![[quartz/quartz/static/icon.png|inlL]]]
 

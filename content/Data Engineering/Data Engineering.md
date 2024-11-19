@@ -19,8 +19,6 @@ Aspects of Data Engineering:
 
 ### AWS
 [[AWS]]
-
-
 ### Data Engineering Fundamentals
 [[Data Engineering Fundamentals]]
 

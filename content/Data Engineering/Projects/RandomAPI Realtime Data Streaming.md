@@ -1,5 +1,7 @@
 
-## Architecture 
+### Github Repo:
+https://github.com/andresbasilea/RandomAPIStream
+### Architecture 
 
 ![[Pasted image 20241031195138.png]]
 

@@ -10,7 +10,8 @@ Hope you enjoy.
 
 ![[000014770019.png]]
 
-
+### Why Sysyphus:
+[[Sysyphus]]
 ### Data Engineering:
 [[Apache]]
 [[APIs]]
@@ -20,3 +21,11 @@ Hope you enjoy.
 [[Databases]]
 [[Docker and Kubernetes]]
 [[GCP Basics]]
+
+
+
+### Literature and Books:
+[[Literature and Books]]
+
+### Music:
+[[Music]]

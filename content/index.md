@@ -8,7 +8,7 @@ This journal has been created in order to share my notes/perspectives/comments r
 
 Hope you enjoy. 
 
-![[000014770019.png]]
+![[DSC_0343.jpg]]
 
 ### Why Sysyphus:
 [[Sysyphus]]
@@ -21,3 +21,7 @@ Hope you enjoy.
 
 ### Music:
 [[Music]]
+
+
+### Photography:
+[[Photography]]

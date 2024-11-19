@@ -18,3 +18,7 @@
 ![[Photo03_3(1).png]]
 ![[Photo05_5.png]]
 ![[Photo09_9(1).png]]
+![[Screenshot 2023-10-08 143600.png]]
+![[Screenshot 2023-10-08 143643.png]]
+![[Screenshot 2023-10-08 143709.png]]
+![[Screenshot 2023-10-08 143655.png]]

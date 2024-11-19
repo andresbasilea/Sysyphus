@@ -10,18 +10,18 @@ Hope you enjoy.
 
 ![[DSC_0343.jpg]]
 
-### Why Sysyphus:
+### Why Sysyphus?
 [[Sysyphus]]
-### Data Engineering:
+### Data Engineering
 [[Data Engineering]]
 
 
-### Literature and Books:
+### Literature and Books
 [[Literature and Books]]
 
-### Music:
+### Music
 [[Music]]
 
 
-### Photography:
+### Photography
 [[Photography]]

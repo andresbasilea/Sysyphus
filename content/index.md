@@ -13,15 +13,7 @@ Hope you enjoy.
 ### Why Sysyphus:
 [[Sysyphus]]
 ### Data Engineering:
-[[Apache]]
-[[APIs]]
-[[AWS]]
-[[Data Engineering Fundamentals]]
-[[Data Modeling]]
-[[Databases]]
-[[Docker and Kubernetes]]
-[[GCP Basics]]
-
+[[Data Engineering]]
 
 
 ### Literature and Books:

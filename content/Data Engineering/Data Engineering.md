@@ -6,3 +6,6 @@
 [[Databases]]
 [[Docker and Kubernetes]]
 [[GCP Basics]]
+
+
+![[dataengineering.webp]]

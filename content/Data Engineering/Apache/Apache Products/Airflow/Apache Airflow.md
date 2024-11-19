@@ -3,9 +3,6 @@ title: Apache Airflow
 
 date: false
 ---
-
-
-
 Apache Airflow is an open-source platform for developing, scheduling, and monitoring batch-oriented workflows. 
 	- Dynamic: Python code. Dynamic pipeline generation
 	- Extensible: Integration with multiple technologies. 

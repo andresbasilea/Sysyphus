@@ -1,4 +1,5 @@
 ![[Pasted image 20241117105333.png]]
+[Photo](https://www.pluralsight.com/cloud-guru)
 
 **Cloud Storage**: Unstructured object storage. Buckets where you can store files, which are regional, dual region or multi region. Data can be accesed in Standard, Nearline or Coldline ways (depending on how often). Storage event triggers with google pub/sub.
 
@@ -23,5 +24,32 @@
 **Cloud Memorystore**: Managed Redis instances. No need to provision and configure own VM. Redis is commonly used as in-memory DB, cache or message broker. Built-in high availability and vertically scalable (adding RAM to instances).
 
 
+### Structured and Unstructured Data
+| Structured      | Unstructured (GCS) |
+| --------------- | ------------------ |
+| SQL Data        | Binary Blobs       |
+| NoSQL data      | Videos, images     |
+| Analytics Data  | Proprietary files  |
+| Keys and Values |                    |
 
-![[Pasted image 20241117120822.png]]![[Pasted image 20241117120841.png]]
+
+
+### Analytics Data
+
+| Low Latency (Cloud Bigtable) | Warehouse (Big Query) |
+| ---------------------------- | --------------------- |
+| Petabyte Scale               | Petabyte Scale        |
+| Single-key rows              | Analytics warehouse   |
+| Time Series or IoT data      | SQL queries           |
+
+
+### Relational Data
+
+| Horizontal Scaling (Cloud Spanner) | Vertical Scaling (Cloud SQL) |
+| ---------------------------------- | ---------------------------- |
+| ANSI SQL                           | MySQL or PostgreSQL          |
+| Global Replication                 | Managed Service              |
+| High Availability and consistency  | High Availability            |
+
+
+

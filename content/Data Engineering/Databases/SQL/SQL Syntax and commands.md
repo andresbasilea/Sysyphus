@@ -1,28 +1,7 @@
 ![[Pasted image 20241013205100.png|700]]
+[Photo](https://www.datacamp.com/cheat-sheet/sql-basics-cheat-sheet)
 
-
-SELECT * FROM table
-WHERE column != "x"
-ORDER  BY column2 DESC
-
-
-
-#### DATEDIFF command
-	SELECT w1.id
-	
-	FROM Weather w1, Weather w2
-	
-	WHERE DATEDIFF(w1.recordDate, w2.recordDate) = 1 AND w1.temperature > w2.temperature
-
- 
-
-
-
-
-
-
-
-# Query Optimization
+### Query Optimization
 
 - Using indexes on Join on columns makes the Join perform much faster.
 - To leverage indexes efficiently, it is important to write SARGABLE queries. 
@@ -37,9 +16,9 @@ ORDER  BY column2 DESC
 - Avoid sorting the whole dataset
 
 
-# Query Order
-
-![[Pasted image 20241111205708.png]]
+### Query Order
+![[Pasted image 20241118222129.png]]
+[Photo](https://blog.bytebytego.com/p/ep50-visualizing-a-sql-query)
 
 
 SELECT e.employee_id, e.department, COUNT(i.incident_id) AS incident_count 
@@ -49,3 +28,10 @@ WHERE i.incident_date >= DATEADD(YEAR, -2, GETDATE()) -- SQL Server example for 
 GROUP BY e.employee_id, e.department 
 ORDER BY incident_count DESC;
 
+
+#### DATEDIFF command
+	SELECT w1.id
+	
+	FROM Weather w1, Weather w2
+	
+	WHERE DATEDIFF(w1.recordDate, w2.recordDate) = 1 AND w1.temperature > w2.temperature

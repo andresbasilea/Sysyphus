@@ -6,8 +6,6 @@ Apache Spark workflow is managed as a DAG, where Nodes represent RDDs and edges 
 
 Apache Spark requires a cluster manager and a distributed storage system. 
 
-Hadoop:
-
 ### Batch vs Streaming Data
  Data Lake (or sth) -> Python -> SQL DBT, etc -> Spark -> Python
 
@@ -33,3 +31,96 @@ Uses of Spark:
 	
 
 
+
+### Spark Basic Architecture
+
+Single machines do not have enough power and resources to perform computations on huge amounts of information. A *cluster*, or group of computers, pools the resources of many machines together, giving us the capacity to use the cumulative resources as if they were on a single computer. 
+
+Spark manages and coordinates the execution of tasks on data across a cluster of computers.
+
+### Spark Applications
+
+- They consist of a *driver* process and a set of *executor* processes.
+- **Driver process:**
+	- Runs main() function.
+	- Maintains information about the Spark Application.
+	- Responds to a user's program or input
+	- Analyzes, distributes and schedules work across executors.
+- **Executor processes:**
+	- Carry out the work that the driver assigns them.
+	- Executes code assigned to it by the driver
+	- Reports the state of the computation on that executor back to the driver node.
+
+![[Pasted image 20241119200226.png]]
+
+<small>Architecture of a Spark Application (Chambers, *Spark the definitive guide*)</small>
+
+### SparkSession
+
+- To control a Spark application, you do it through the SparkSession.
+- One SparkSession per Spark Application.
+
+### Spark Dataframe
+- Most common Structured API and represents a table of data with columns and rows. 
+- Columns and rows defined by a schema.
+- A DataFrame can span thousands of computers.
+- With DataFrames, you do not (for the most part) manipulate partitions manually or individually. You specify high-level transformations of data in the physical partitions, and Spark determines how this work will actually execute on the cluster.
+
+
+### Partitions
+- Collection of rows that sit on one physical machine in your cluster.
+
+
+### Transformations
+- Instructions to change a DataFrame.
+- Core of how you express business logic in Spark.
+- Spark will not act on transformations until we call an action. 
+- Two types of transformations, those that specify:
+	- Narrow Dependencies: Those for which each input partition will contribute to only one output partition.
+	- Wide Dependencies: Input partitions contribute to many output partitions. Often referred to as a *shuffle*.
+
+
+### Lazy Evaluation
+- Spark will wait until the very last moment to execute the graph of computation instructions.
+- Instead of modifying data immediately when you express some operation, you build up a plan of transformations to apply to source data. 
+- Transform raw DataFrame transformations to a streamlined physical plan that runs efficiently across the cluster.
+
+### Action
+- Triggers a transformation.
+- Simplest action is *count*, which gives the total number of records in a DataFrame. 
+```python
+	Dataframe.count()
+```
+
+	In specifying this action, we started a Spark job that runs our filter transformation (a narrow transformation), then an aggregation (a wide transformation) that performs the counts on a per partition basis, and then a collect, which brings our result to a native object in the respective language
+
+- Three types of actions:
+	- Actions to view data in the console.
+	- Actions to collect data to native objects in the respective language.
+	- Actions to write to output data sources.
+
+
+### Example of reading data using DataFrameReader associated to SparkSession with Python API
+
+```python
+data = spark\
+.read
+.option("inferSchema", "true")\
+.option("header", "true")\
+.csv("/data/data.csv")
+```
+- The DataFrame has a set of columns with unspecified number of rows, because reading data is a transformation, and therefore a lazy operation. 
+- Inferring the schema was achieved by reading only a few rows of the data.
+
+
+### Explain plan
+The logical plan of transformations that we build up defines a lineage for the DataFrame so that at any given point in time, Spark knows how to recompute any partition by performing all of the operations it had before on the same input data.
+
+### Example of using sort shuffle and defining output number of partitions
+```python
+spark.conf.set("spark.sql.shuffle.partitions", "5")
+data.sort("count").take(3)
+```
+![[Pasted image 20241119200314.png]]
+
+<small>Using shuffle with a fixed number of output partitions (Chambers, *Spark the definitive guide*)</small>

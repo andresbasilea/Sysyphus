@@ -10,7 +10,7 @@ Aspects of Data Engineering:
 - Building Foundations for Analytics and AI: Without Data Engineering, there is no AI, machine learning or advanced analytics. 
 - Continuous Learning: The field evolves rapidly, with new tools, frameworks and paradigms emerging regularly. 
 ### Projects
-[[Projects]]
+[[quartz/content/Data Engineering/Projects/Projects]]
 ### Apache
 [[Apache]]
 

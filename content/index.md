@@ -15,7 +15,8 @@ Hope you enjoy.
 ### Data Engineering
 [[Data Engineering]]
 
-
+### Artificial Intelligence 
+[[Artificial Intelligence]]
 ### Literature and Books
 [[Literature and Books]]
 

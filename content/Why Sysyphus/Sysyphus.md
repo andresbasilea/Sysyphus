@@ -33,3 +33,5 @@ Camus’s interpretation can be profoundly liberating:
 - It reframes struggles not as futile but as opportunities to define ourselves.
 
 **Meaning is not handed to us; it's something that we create.** 
+
+

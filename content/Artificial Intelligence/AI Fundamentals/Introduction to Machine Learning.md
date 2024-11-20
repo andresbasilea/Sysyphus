@@ -65,6 +65,7 @@ Main types -> supervised, unsupervised, reinforcement
 
 
 **Transfer Learning: Benefit of not having to train with a lot of images as in original classifier model.**
+
 ![[Pasted image 20241120113123.png]]
 
 [Example of the concept of transfer learning](https://www.pluralsight.com/cloud-guru)

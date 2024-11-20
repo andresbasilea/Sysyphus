@@ -20,6 +20,9 @@ Hope you enjoy.
 ### Literature and Books
 [[Literature and Books]]
 
+### Math
+[[Math]]
+
 ### Music
 [[Music]]
 

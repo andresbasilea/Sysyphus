@@ -15,6 +15,9 @@ Aspects of Data Engineering:
 ### Apache
 [[Apache]]
 
+### Google Cloud Platform
+[[Google Cloud Platform]]
+
 ### APIs
 [[APIs]]
 
@@ -35,9 +38,6 @@ Aspects of Data Engineering:
 ### Docker and Kubernetes
 [[Docker and Kubernetes]]
 
-
-### Google Cloud Platform
-[[Google Cloud Platform]]
 
 
 

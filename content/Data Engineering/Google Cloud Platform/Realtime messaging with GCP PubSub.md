@@ -1,15 +1,18 @@
+> [!info] Pub/Sub and Apache Kafka 
+> Pub/Sub is based on [[Apache Kafka]]
+
 ### Pub/Sub Concepts
 
-Messaging and event ingestion at global level.
+- Messaging and event ingestion at global level.
 
-Messaging bus, handles messages between client and app, or between app and other apps.
+- Messaging bus, handles messages between client and app, or between app and other apps.
 
-Message bus is splitted into different groups of messages, or topics.
+- Message bus is splitted into different groups of messages, or topics.
 
-Anyone can publish a message to a topic or choose to recibe a message from a topic.
+- Anyone can publish a message to a topic or choose to recibe a message from a topic.
 
-![](file:///tmp/lu826213pg2.tmp/lu826213pz3_tmp_29fb77ae.png)  
-  
+  ![[Pasted image 20241120104753.png]]
+  [Pub Sub as a Middleware](https://www.pluralsight.com/cloud-guru)
 
 In doing this, we loosely couple our services with a message bus and introduce resilience in our system. Fault tolerance.
 
@@ -32,8 +35,6 @@ In doing this, we loosely couple our services with a message bus and introduce r
 - useful for distributing workloads, asynchronous workflows (order of events), distributing event notifications, distributed logging and device data streaming.
 
   
-  
-
 Pub sub adds glue, adds logic and joins multiple services together.
 
 ### Pub/Sub Basics
@@ -44,43 +45,9 @@ Patterns:
 
 - 1 to many: Each subscriber gets a copy of the same message (each has one subscription) at least once.
 
-![](file:///tmp/lu826213pg2.tmp/lu826213pz3_tmp_764a2027.png)
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
 - many to many: same but with multiple topics.
 
   
-  
-
 **Publishing messages to pub/sub:**
 
 1.- Create a message containing your data JSON payload base 64 encoded data, 10MB or less.

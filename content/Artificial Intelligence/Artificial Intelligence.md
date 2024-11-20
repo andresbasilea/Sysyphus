@@ -6,11 +6,10 @@ AI is the forefront of shaping the world's future. Contributing to something so 
 ![[Pasted image 20241119201750.png]]
 
 ### Projects
-[[quartz/content/Artificial Intelligence/Projects/Projects|Projects]]
+[[AI Projects]]
 
 ### AI Fundamentals
 [[AI Fundamentals]]
-
 
 ### Algorithms and Models
 [[Algorithms and Models]]

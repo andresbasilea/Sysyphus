@@ -36,9 +36,11 @@ spark.range(2).collect() # Creates an array of Row objects.
 ### Spark Types
 
 ![[Pasted image 20241120201914.png]]
+
 <small> Basic Python types and their analogous in Spark. (Chambers, Spark, The Definitive Guide)</small>
 
 ![[Pasted image 20241120202756.png]]
+
 <small> More Python types and their analogous in Spark. (Chambers, Spark, The Definitive Guide)</small>
 
 ### Overview of Structured API Execution
@@ -51,6 +53,7 @@ Steps:
 ![[Pasted image 20241120203852.png]]
 ![[Pasted image 20241120204230.png]]
 ![[Pasted image 20241120204257.png]]
+
 <small> From code to Physical Plan on Spark. (Chambers, Spark, The Definitive Guide)</small>
 
 - The *Logical Plan* represents a set of abstract transformations that do not refer to executors or drivers.

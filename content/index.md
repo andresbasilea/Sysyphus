@@ -9,24 +9,21 @@ This journal has been created in order to share my notes/perspectives/comments r
 Hope you enjoy. 
 ![[a0dd6e34-be77-4e45-a3d2-b376e805402b.png]]
 
-### Why Sysyphus?
-[[Sysyphus]]
-### Data Engineering
-[[Data Engineering]]
 
 ### Artificial Intelligence 
 [[Artificial Intelligence]]
+### Data Engineering
+[[Data Engineering]]
 ### Literature and Books
 [[Literature and Books]]
-
 ### Math
 [[Math]]
-
 ### Music
 [[Music]]
-
 ### Photography
 [[Photography]]
-
 ### Urban Development
 [[Urban Development]]
+
+### Why Sysyphus?
+[[Sysyphus]]

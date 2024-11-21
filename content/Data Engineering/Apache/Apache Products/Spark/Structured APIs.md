@@ -40,3 +40,20 @@ spark.range(2).collect() # Creates an array of Row objects.
 
 ![[Pasted image 20241120202756.png]]
 <small> More Python types and their analogous in Spark. (Chambers, Spark, The Definitive Guide)</small>
+
+### Overview of Structured API Execution
+Steps:
+1. Write DataFrame/Dataset/SQL Code.
+2. If valid code, Spark converts this to a *Logical Plan*
+3. Spark transforms the *Logical Plan* to a *Physical Plan*, checking for optimizations along the way. 
+4. Spark then executes this *Physical Plan* (RDD manipulations) on the cluster.
+
+![[Pasted image 20241120203852.png]]
+![[Pasted image 20241120204230.png]]
+![[Pasted image 20241120204257.png]]
+<small> From code to Physical Plan on Spark. (Chambers, Spark, The Definitive Guide)</small>
+
+- The *Logical Plan* represents a set of abstract transformations that do not refer to executors or drivers.
+- The *Physical Plan* specifies how the logical plan will execute on the cluster by generating different physical execution strategies and comparing them through a **cost model**. An example of cost comparison might be choosing how to perform a given join by looking at the physical attributes of a given table (how big the table is, or how big the partitions are).
+
+

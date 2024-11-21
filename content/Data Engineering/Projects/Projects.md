@@ -9,3 +9,9 @@
 ## Unstructured Data Streaming:
 [[Unstructured Data Streaming]]
 ![[Pasted image 20241118184816.png]]
+
+### Working with Images I
+[[Working with Images]]
+
+### Working with Images II: Brodatz Textures Characterization
+[[Brodatz Textures Characterization]]

@@ -33,3 +33,10 @@ It should be simple to migrate from *batch* to *streaming* processing when using
 spark.range(2).collect() # Creates an array of Row objects.
 ```
 
+### Spark Types
+
+![[Pasted image 20241120201914.png]]
+<small> Basic Python types and their analogous in Spark. (Chambers, Spark, The Definitive Guide)</small>
+
+![[Pasted image 20241120202756.png]]
+<small> More Python types and their analogous in Spark. (Chambers, Spark, The Definitive Guide)</small>

@@ -1,7 +1,7 @@
 Open Source unified analytics engine for large-scale data processing. 
 
 > [!abstract] Abstract
-Spark is a distributed programming model in which the user specifies *transformations*. Multiple transformations build up a directed acyclic graph of instructions. An *action* begins the process of executing that DAG. An action begins the process of executing the graph set of instructions by breaking it down into stages and tasks to execute across the cluster. The logical structures that we manipulate with transformations and actions are DataFrames and Datasets. To create a new DataFrame or Dataset, you call a transformation. To start computation or convert to native language types, you call an action. (Chambers, *Spark, The Definitive Guide*)
+> Spark is a distributed programming model in which the user specifies *transformations*. Multiple transformations build up a directed acyclic graph of instructions. An *action* begins the process of executing that DAG. An action begins the process of executing the graph set of instructions by breaking it down into stages and tasks to execute across the cluster. The logical structures that we manipulate with transformations and actions are DataFrames and Datasets. To create a new DataFrame or Dataset, you call a transformation. To start computation or convert to native language types, you call an action. (Chambers, *Spark, The Definitive Guide*)
 
 Apache Spark has its architectural foundation in the resilient distributed dataset (RDD), a read-only multiset of data items distributed over a cluster of machines, maintained in a fault tolerant way. 
 

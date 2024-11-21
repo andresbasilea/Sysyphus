@@ -8,6 +8,8 @@ Some products created / owned / maintained by Apache are:
 
 ### Apache Spark
 [[Apache Spark]]
+- [[Structured APIs]]
+
 
 ### Apache Airflow
 [[Apache Airflow]]

@@ -1,5 +1,8 @@
 Open Source unified analytics engine for large-scale data processing. 
 
+> [!abstract] Abstract
+Spark is a distributed programming model in which the user specifies *transformations*. Multiple transformations build up a directed acyclic graph of instructions. An *action* begins the process of executing that DAG. An action begins the process of executing the graph set of instructions by breaking it down into stages and tasks to execute across the cluster. The logical structures that we manipulate with transformations and actions are DataFrames and Datasets. To create a new DataFrame or Dataset, you call a transformation. To start computation or convert to native language types, you call an action. (Chambers, *Spark, The Definitive Guide*)
+
 Apache Spark has its architectural foundation in the resilient distributed dataset (RDD), a read-only multiset of data items distributed over a cluster of machines, maintained in a fault tolerant way. 
 
 Apache Spark workflow is managed as a DAG, where Nodes represent RDDs and edges operations on RDDs. 
@@ -124,3 +127,38 @@ data.sort("count").take(3)
 ![[Pasted image 20241119200314.png]]
 
 <small>Using shuffle with a fixed number of output partitions (Chambers, *Spark the definitive guide*)</small>
+
+
+### DataFrames and SQL
+
+You can make any DataFrame into a table or view with one method call:
+
+```python
+data.createOrReplaceTempView("data_")
+```
+
+An SQL query to a DataFrame returns another DataFrame. 
+
+```python
+sqlWay = spark.sql("""
+SELECT COLUMN_NAME, count(1)
+FROM data_
+GROUP BY COLUMN_NAME
+""")
+dataFrameWay = data\
+.groupBy("COLUMN_NAME")\
+.count()
+sqlWay.explain()
+dataFrameWay.explain()
+```
+
+Or you can do it in plain SQL:
+
+```sql
+sqlWay = spark.sql("""
+SELECT COLUMN_NAME, count(1)
+FROM data_
+GROUP BY COLUMN_NAME
+""")
+```
+

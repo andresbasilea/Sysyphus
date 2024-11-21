@@ -5,6 +5,10 @@ AI is the forefront of shaping the world's future. Contributing to something so 
 
 ![[Pasted image 20241119201750.png]]
 
+
+> [!danger] Danger
+> Even though I try to keep these notes updated, everything in computer / software engineering has fast-paced changes. Keep that in mind. 
+
 ### Projects
 [[AI Projects]]
 

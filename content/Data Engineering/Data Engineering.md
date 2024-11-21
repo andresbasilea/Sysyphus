@@ -9,6 +9,11 @@ Aspects of Data Engineering:
 - Problem-Solving: Every project is a puzzle that demands a mix of technical skills, innovation, and adaptability.
 - Building Foundations for Analytics and AI: Without Data Engineering, there is no AI, machine learning or advanced analytics. 
 - Continuous Learning: The field evolves rapidly, with new tools, frameworks and paradigms emerging regularly. 
+
+> [!danger] Danger
+> Even though I try to keep these notes updated, everything in computer / software engineering has fast-paced changes. Keep that in mind. 
+
+
 ### Projects
 [[Projects]]
 

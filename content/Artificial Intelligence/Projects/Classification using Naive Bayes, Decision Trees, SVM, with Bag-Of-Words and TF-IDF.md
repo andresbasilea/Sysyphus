@@ -1,5 +1,5 @@
 
-  
+  ![[BayesSVMDecisionTreeClassification 1.pdf]]
 ### Movie Reviews: Classification Using Naive Bayes, Decision Tree, and SVM with Bag-of-Words and TF-IDF
 
 **Preprocessing Variations:**

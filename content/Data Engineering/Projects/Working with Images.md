@@ -1,4 +1,3 @@
-
 ![[WorkingWithImages.pdf]]
 ```python
 from google.colab import drive

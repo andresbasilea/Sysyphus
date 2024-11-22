@@ -2,8 +2,6 @@
 > In deep learning, a multilayer perceptron (MLP) is a name for a modern feedforward neural network consisting of fully connected neurons with nonlinear activation functions, organized in layers, notable for being able to distinguish data that is not linearly separable. [Wikipedia](https://en.wikipedia.org/wiki/Multilayer_perceptron)
 
 
-### Basile Álvarez Andrés José
-
 
 ```python
 from google.colab import drive

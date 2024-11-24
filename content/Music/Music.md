@@ -5,3 +5,9 @@
 
 ### Presente
 [[Presente]]
+
+### Artists
+[[Artists]]
+
+### Albums
+[[Albums]]

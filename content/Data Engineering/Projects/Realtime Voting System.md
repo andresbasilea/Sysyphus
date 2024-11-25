@@ -20,8 +20,8 @@ System to automatize a voting-type process. There are predefined parties and can
 - Streamlit for live tracking of the results & data visualization
 ### Creating the application
 
-Using Python Virtual Environment for installing all the Packages. 
-- Creating a *main.py* file for creating the required PostgreSQL tables and of Kafka topic. Logic to consume votes and produce data. 
+Using Python [[Python Virtual Environment vs Conda Environment|virtual environment]] installing all the Packages. 
+- Added *main.py* file for creating the required PostgreSQL tables and of Kafka topic. Logic to consume votes and produce data. 
 	- `pip install` `psycopg2-binary` to access PostgreSQL
 	- `pip install` `confluent_kafka` to communicate with Kafka
 	- `pip install` `simplejson` for JSON serialization. 

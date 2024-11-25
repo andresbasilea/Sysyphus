@@ -69,3 +69,7 @@ On the previous code:
 - We defined a DAG named "demo". The DAG will run once a day starting Jan. 1, 2022. 
 - Two tasks were created. The >> defines a dependency and controls the order of execution of tasks. 
 
+The tasks can run any arbitrary code (Spark jobs, moving data between buckets, sending emails, etc.)
+
+Airflow normally runs batch workflows, which have a clear start and end and run at regular intervals. Airflow is not a streaming solution. However, a streaming system such as Kafka is often seen working together with Airflow. 
+

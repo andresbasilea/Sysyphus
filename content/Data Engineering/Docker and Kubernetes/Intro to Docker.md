@@ -20,6 +20,17 @@ Docker:
 	However, if we do changes in the image, for example downloading a package, and then we run the docker run command again, the changes we did won't be saved.  --> [[Dockerfile]]
 	
 
+### Why does Docker ask for `sudo`?
+
+The Docker daemon binds to a Unix socket, not a TCP port. By default, the `root` user owns the Unix socket (so you need `sudo` to access it). The Docker daemon always runs as the `root` user. 
+
+If you don't want to use `sudo` each time you want to run a Docker command, you need to create a Unix group called `docker` and add users to it. On some Linux distros, the system automatically creates this group when installing Docker Engine. 
+
+>[!danger] Creating the Docker Unix group impacts security in your system, and might leave it vulnerable to attacks like the Docker Daemon Attack. 
+
+
+
+
 
 
 

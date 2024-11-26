@@ -10,6 +10,10 @@
 [[Unstructured Data Streaming]]
 ![[Pasted image 20241118184816.png]]
 
+### Realtime Voting System
+[[Realtime Voting System]]
+![[Pasted image 20241125174751.png]]
+
 ### Working with Images I
 [[Working with Images]]
 

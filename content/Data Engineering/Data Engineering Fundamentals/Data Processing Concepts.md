@@ -23,4 +23,13 @@
 #### Data processing pipelines
 Stages of a pipeline: Ingestion, storage, processing and visualization. 
 
+### Sharding
+
+### Replication 
+
+### Latency
+
+### CAP Theorem 
+
+### Optimistic and Pessimistic Locking
 

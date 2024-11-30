@@ -16,6 +16,8 @@ Hope you enjoy.
 [[Data Engineering]]
 ### Coding
 [[Coding]]
+### Finance
+[[FInance]]
 ### Literature and Books
 [[Literature and Books]]
 ### Math

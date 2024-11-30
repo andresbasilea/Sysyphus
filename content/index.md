@@ -17,7 +17,7 @@ Hope you enjoy.
 ### Coding
 [[Coding]]
 ### Finance
-[[FInance]]
+[[Finance]]
 ### Literature and Books
 [[Literature and Books]]
 ### Math

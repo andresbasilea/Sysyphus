@@ -1,3 +1,8 @@
+---
+draft: true
+---
+
+
 
 > [!danger] Proceed with caution! 
 >I asked ChatGPT  to answer some questions. These are the responses. I am going to check them to see if they are correct. 
@@ -295,3 +300,6 @@
     - **Review Code**: Check for bugs, errors in logic, or incorrect assumptions in the transformation code.
     - **Unit Tests**: Run unit tests on the transformation logic to validate individual functions.
     - **Logging**: Add logging to capture intermediate results at each stage of the transformation.
+
+
+

@@ -1,4 +1,3 @@
-[[Data Models and Query Languages]]
 
 An imperative language tells the computer to perform certain operations in a certain order. You can imagine stepping through the code line by line, evaluating conditions, updating variables, and deciding whether to go around the loop one more time.
 

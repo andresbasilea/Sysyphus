@@ -1,4 +1,3 @@
-[[Foundations of Data Systems]]
 
 To design software in such a way that it hopefully minimizes pain during maintenance: 
 - Operability

@@ -1,4 +1,3 @@
-[[Data Models and Query Languages]]
 
 SQL - Based on relational data model - data is organized into *relations* (called *tables* in SQL), where each relation is an unordered collection of *tuples* (*rows* in SQL).
 
@@ -15,8 +14,10 @@ Most programming is done in OOP, which leads to criticism of SQL: if data is sto
 
 The JSON representation has better locality than the multi-table schema typical in SQL. If you want to fetch a profile in the relational example, you need to either perform multiple queries (query each table by user_id) or perform a messy multiway join between the users table and its subordinate tables. In the JSON representation, all the relevant information is in one place, and one query is sufficient
 
-![[Pasted image 20240918151631.png]]
-![[Pasted image 20240918152012.png]]
+![[Pasted image 20241201131123.png]]
+![[Pasted image 20241201131134.png]]
+
+
 
 Document databases work well for one-to-many relationships, but struggle with many-to-many relationships, and do not support joins. 
 

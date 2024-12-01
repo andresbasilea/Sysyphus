@@ -1,11 +1,14 @@
 
-##### 3 v's of Big Data: 
+#### 3 v's of Big Data: 
 - Volume
 - Velocity (ingest, analyzed, visualized)
 - Variety (types of data processed)
 
 #### Data Warehouse
 - Contains data that is structured and/or processed. Ready to use data. Rigid data that is normally easy to understand, but less up-to-date.
+
+#### Star and Snowflake Schemas
+
 
 #### Data Lake
 - Raw and unstructured data, normally before transformation or organization. Flexible data, no structure is enforced.
@@ -23,13 +26,28 @@
 #### Data processing pipelines
 Stages of a pipeline: Ingestion, storage, processing and visualization. 
 
-### Sharding
+#### Normalization and Denormalization
 
-### Replication 
+#### Execution Plan
 
-### Latency
 
-### CAP Theorem 
+#### Event Driven Architecture
 
-### Optimistic and Pessimistic Locking
+
+#### Data Governance
+
+#### Sharding
+
+#### Partitioning
+
+#### Indexing
+
+
+#### Replication 
+
+#### Latency
+
+#### CAP Theorem 
+
+#### Optimistic and Pessimistic Locking
 

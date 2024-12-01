@@ -39,6 +39,8 @@ Aspects of Data Engineering:
 ### Databases
 [[Databases]]
 
+### Designing Data Intensive Applications
+[[Designing Data Intensive Applications]]
 
 ### Docker and Kubernetes
 [[Docker and Kubernetes]]

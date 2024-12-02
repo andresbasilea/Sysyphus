@@ -28,6 +28,5 @@ Hope you enjoy.
 [[Photography]]
 ### Urban Development
 [[Urban Development]]
-
 ### Why Sysyphus?
 [[Sysyphus]]

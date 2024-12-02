@@ -53,9 +53,31 @@ Every topic can be **replicated** to ensure fault-tolerance and availability. A 
 A broker is a helper that lets information go between producers and consumers. The broker handles requests to write new information and read existing information. The Kafka **cluster** is the group of one or more brokers working together. 
 
 
+### What is the Kafka Bootstrap Server?
 
+```python
+producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
+```
 
+What does the bootstrap_servers refer to in the previous code? It is the URL of one of the Kafka brokers which you give to fetch the initial metadata about your Kafka cluster. As brilliantly described on this stackoverflow [response](https://stackoverflow.com/questions/61656223/what-is-bootstrap-server-in-kafka-config) by Ashan Priyadarshana, a bootsrap server is:
 
+We know that a kafka cluster can have 100s or 1000nds of brokers (kafka servers). But how do we tell clients (producers or consumers) to which to connect? Should we specify all 1000nds of kafka brokers in the configuration of clients? no, that would be troublesome and the list will be very lengthy. Instead what we can do is, take two to three brokers and consider them as bootstrap servers where a client initially connects. And then depending on alive or spacing, those brokers will point to a good kafka broker.
+
+So `bootstrap.servers` is a configuration we place within clients, which is a comma-separated list of host and port pairs that are the addresses of the Kafka brokers in a "bootstrap" Kafka cluster that a Kafka client connects to initially to bootstrap itself.
+
+A host and port pair uses : as the separator.
+
+```
+localhost:9092
+localhost:9092,another.host:9092
+```
+
+So as mentioned, `bootstrap.servers` provides the initial hosts that act as the starting point for a Kafka client to discover the full set of alive servers in the cluster.
+
+Special Notes:
+
+- Since these servers are just used for the initial connection to discover the full cluster membership (which may change dynamically), this list does not have to contain the full set of servers (you may want more than one, though, in case a server is down).
+- Clients (producers or consumers) make use of all servers irrespective of which servers are specified in bootstrap.servers for bootstrapping.
 
 
 

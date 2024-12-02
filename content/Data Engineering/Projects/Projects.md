@@ -1,7 +1,8 @@
 ## Google Cloud Realtime Streaming:
 
 [[Google Cloud Realtime Streaming]]
-![[Pasted image 20241104174838.png]]
+![[Pasted image 20241202090541.png]]
+
 
 ## RandomAPI Realtime Data Streaming:
 [[RandomAPI Realtime Data Streaming]]

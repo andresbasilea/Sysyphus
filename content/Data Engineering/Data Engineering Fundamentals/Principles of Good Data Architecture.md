@@ -1,4 +1,22 @@
 
+
+Joe Reis (OREILLY, *Fundamentals of Data Engineering*, 2022), enlists the principles of good data architecture as follows:
+1. Choose common components wisely
+2. Plan for failure
+3. Architect for scalability
+4. Architecture is leadership
+5. Always be architecting
+6. Build loosely coupled systems
+7. Make reversible decisions
+8. Prioritize security
+9. Embrace FinOps
+
+
+
+
+
+
+
 #### **Some Best Practices:**
 - Data Products Approach
 - Leverage Data versioning

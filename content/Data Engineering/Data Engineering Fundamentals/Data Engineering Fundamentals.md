@@ -5,5 +5,5 @@
 [[Data Engineering Concepts]]
 ### Data Engineering Q&A
 [[Data Engineering Q&A]]
-### Some Best Practices
-[[Some Best Practices]]
+### Principles of Good Data Architecture & Some Best Practices
+[[Principles of Good Data Architecture]]

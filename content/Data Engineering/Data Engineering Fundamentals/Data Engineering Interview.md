@@ -8,7 +8,23 @@ draft: true
 ![[Pasted image 20241202131216.png]]
 
 
+
+
+![[Pasted image 20241204194648.png]]
+
+
+
 ### TODO
+
+MASTER
+Kubernetes
+AWS
+Databricks
+
+KNOW
+Snowflake
+
+
 
 Preparar situaciones entrevista RH
 metodologías agiles

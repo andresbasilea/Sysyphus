@@ -5,6 +5,7 @@
 ![[Pasted image 20241029205012.png]]
 [State of Data Engineering 2024](https://lakefs.io/blog/the-state-of-data-engineering-2024/)
 
+There are thousands of cloud native applications. One way to navigate them is through the Cloud Native Landscape offered by the CNCF. To check it out, go here: [CNCF Cloud Native Landscape](https://landscape.cncf.io/)
 ### MapReduce
 
 Open Source. MapReduce is a programming model that uses two functions: map and reduce. It is also an implementation of the model with the two functions in a distributed manner, running on clusters of hundreds of computers. CREATED AT GOOGLE.

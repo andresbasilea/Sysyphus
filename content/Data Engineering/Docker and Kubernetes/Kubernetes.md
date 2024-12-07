@@ -2,6 +2,8 @@
 > [!abstract] Kubernetes
 > Also known as K8s, Kubernetes is an open source platform for automating deployment, scaling and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery
 
+Containers are a good way to bundle and run applications. In a production environment, you need to manage the containers that run the applications and ensure that there is no downtime. If a container goes down, another one needs to start. This behavior should be handled by a system automatically, and here is were Kubernetes comes into play. 
+
 ### Some of the Kubernetes Features
 - Automated rollaouts and rollbacks: The principle behind Kubernetes is defining a desired state for the deployed containers, and Kubernetes will always try to keep that desired state. 
 - Service discovery and load balancing: If traffic to a container is high, Kubernetes is able to load balance and distribute the network traffic so that the deployment is stable. 
@@ -76,29 +78,80 @@
 
 There are many implementations of the interfaces, we can choose which to use to achieve better performance, new functionalities, etc. Pluggable implementation.
 
-### Kubernetes Installation and Setup
+### The Kubernetes API
 
-#### Installing Devbox
-Devbox is a wrapper around Nix. Nix is a package manager that provides access to different tools and configure reproducible installation. 
+The Kubernetes API let's you query and manipulate the state of objects (pods, Namespaces, ConfigMaps, Events, ...) in kubernetes. The core of Kubernete's control plane is the API server and the HTTP API that it exposes. Users, the different parts of your cluster, and external components all communicate with one another through the API server.
 
-Check this github repo to find devbox json with listing of all cli tools to install. Also find the devbox.lock file that contains the specific versions. Devbox isolates an environment to work on projects. 
+Most operations can be performed through the kubectl command-line interface (or kubeadm), which in turn use the API. 
 
-### Running a KinD Cluster
-- KinD is a simple local cluster for development. 
-- Supports multiple nodes (each node is a container)
-![[Pasted image 20241204224542.png]]
+### Control plane components
 
-Configuring where the KinD cluster is going to mount each node for persisting data. 
-![[Pasted image 20241205220026.png]]
+The control plane's components make global decisions about the cluster (for example, scheduling), as well as detecting and responding to cluster events (for example, starting up a new pod when a Deployment's `replicas` field is unsatisfied).
 
-to create cluster with the config on the previous `kind-config.yaml`, we run `kind create cluster`. In this case, we are using a task file, where we define the commands needed for each step. For example, the step I ran to create the kind cluster was:
-![[Pasted image 20241206065108.png]]
-which I ran by using `task kind:02-create-cluster`. Using a taskfile is a way to simplify the building of projects, by grouping all of the tasks needed to do so, and letting you run them one by one.
+- `kube-apiserver`: The API server is a component of the Kubernetes control plane that exposes the Kubernetes API. 
+- `etcd`: Consistent and highly available key value store used as Kubernete's backing store for all cluster data. 
+- `kube-scheduler`: Control plane component that watches for newly created pods with no assigned node, and selects a node for them to run on. Ensures that there are enough resources for all the pods on a node.
+- `kube-controller-manager`: Control plane component that controller processes. Some types of controller are:
+	- Node controller: Responsible for noticing and responding when nodes go down.
+	- Job controller: Watches for Job objects that represent one-off tasks, then creates pods to run those tasks to completion. 
+	- ServiceAccount controller: Create default ServiceAccounts for new namespaces. 
+- `cloud-controller-manager`: Embeds cloud-specific control logic. Lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster. It only 
 
-The kind architecture we defined will simulate the control plane - worker nodes by using containers, which, as I mentioned previously, were configured on the `kind-config.yaml` file.
+### Node components
 
-To see our created nodes, use `kubectl get nodes`
-![[Pasted image 20241206065650.png]]
+Node components run on every node, maintaining running pods and providing Kubernetes runtime environment.
 
-Use the `kubectl get pods -A` command to list our pods:
-![[Pasted image 20241206065904.png]]
+- `kubelet`: Agent that runs on each node in the cluster. It makes sure that containers are running in a Pod. Kubelet takes a set of PodSpecs provided through various mechanisms and ensures that the containers described in those PodSpecs are running and healthy. 
+- `kube-proxy`: Optional. Network proxy that runs on each node in the cluster. Maintains network rules on nodes. These rules allow network communication to your pods from network sessions inside or outside the cluster. 
+- `container runtime`: Empowers Kubernetes to run containers effectively. It is responsible for managing the execution and lifecycle of containers within the Kubernetes environment. Kubernetes supports container runtimes such as **containerd**, **CRI-O** or any other **Kubernetes CRI (Container Runtime Interface)**
+
+### Nodes
+
+- Kubernetes runs a workload by placing containers into pods to run on nodes. A node may be a virtual or physical machine, depending on the cluster. Each node is managed by the control plane and contains the services needed to run pods. 
+- Typically, you have several nodes in a cluster. 
+
+#### Node management
+- There are two main ways to have Nodes added to the API server:
+	- The kubelet on a node self-registers to he control plane. (default because of `--register-node` flag)
+	- A user manually adds a Node object. 
+- After adding node to API server, the control plane checks whether the node is valid and healthy. Kubernetes keeps the object for an invalid Node and continues checking to see whether it becomes healthy. 
+- Node objects track information about the Node's resource capacity: for example, the amount of memory available and the number of CPUs. Nodes that self register report their capacity during registration. If you manually add a Node, then you need to set the node's capacity information when you add it.
+- The Node name defines it. Two nodes cannot have the same name. 
+
+## Built-in Kubernetes Resources
+### Namespace
+Provides a mechanism to group resources within the cluster. Helps to provide organization to the cluster, where you can take an application and put it in its own namespace, or take a group of applications and put them on the same namespace.
+
+![[Pasted image 20241206223847.png]]
+
+There are 4 initial namespaces: default, kubesystem, kube-node-lease, kube-public
+
+> [!note] Important note on namespaces
+> Namespaces do not act as a network or security boundary, you can still make network calls across namespaces, so namespaces don't provide additional securities / isolation. 
+
+
+
+
+
+
+## Kubectl Commands
+
+```bash
+kubectl get services              # List all services in the namespace
+kubectl get pods --all-namespaces # List all pods in all namespaces
+kubectl get pods -o wide          # List all pods in the current                                           namespace, with more details
+kubectl get deployment my-dep     # List a particular deployment
+kubectl get pods                  # List all pods in the namespace
+kubectl get pod my-pod -o yaml    # Get a pod's YAML
+```
+
+```bash
+# Describe commands with verbose output
+kubectl describe nodes my-node
+kubectl describe pods my-pod
+```
+
+```bash
+# Compares the current state of the cluster against the state that the cluster would be in if the manifest was applied.
+kubectl diff -f ./my-manifest.yaml
+```

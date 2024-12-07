@@ -129,6 +129,40 @@ There are 4 initial namespaces: default, kubesystem, kube-node-lease, kube-publi
 > [!note] Important note on namespaces
 > Namespaces do not act as a network or security boundary, you can still make network calls across namespaces, so namespaces don't provide additional securities / isolation. 
 
+To get the namespaces use: 
+`kubectl get namespaces`
+
+Namespaces are usually defined in yaml files. It is preferred to create a Kubernetes namespace resource by using a yaml file, as the configuration will be stored in the codebase as well. For this, let's use the following yaml file: 
+![[Pasted image 20241207105615.png]]
+
+and the command:
+`kubectl apply -f Namespace.yaml`
+
+![[Pasted image 20241207111249.png]]
+
+To delete: 
+`kubectl delete -f Namespace.yaml`
+
+
+### Pod
+- The smallest deployable unit. The foundational building block of Kubernetes workloads. Where our containers will be run. 
+- We almost never create a pod directly. 
+![[Pasted image 20241207111712.png]]
+- A pod can contain multiple containers
+- Containers within a pod share network and storage
+- Generally, when you have multiple containers in a pod, you are going to have one primary application container and *init* or *sidecar* containers. 
+- A *init* container will be a container that runs on startup before the other containers. Used to prepare files in the filesystem, injecting dependencies for something like a metrics aggregator, etc. 
+- A *sidecar* container runs alongside the primary container. They are sometimes used to run as a network proxy, for example de GCP Cloud SQL proxy sidecar container. 
+- There are many configurations available:
+	- Listening ports
+	- Health probes (how to check if the application is healthy or not)
+	- Resource requests/limits
+	- Security context (whether or not the application is allowed to run as root, read only access, etc.)
+	- Environment variables
+	- Volumes
+	- DNS policies
+
+
 
 
 

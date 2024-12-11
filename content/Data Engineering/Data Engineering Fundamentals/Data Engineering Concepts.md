@@ -91,6 +91,15 @@ Database systems designed with traditional ACID guarantees in mind such as RDBMS
 
 #### Event Driven Architecture
 
+### Stateless Applications
+- A stateless application does not store any client session or data locally on the instance running it. Instead, it offloads state-related information to an external service like a database, cache, or API.
+- Examples: Web servers, RESTful APIs, or microservices that process requests without relying on local data.
+>[!abstract]  **Using Kubernetes Deployments for Stateless Applications**
+> A **Deployment** is a Kubernetes abstraction that manages the lifecycle of your application's pods (the smallest compute unit in Kubernetes). Deployments are used for Stateless Applications because of:
+> - **Scalability**: Stateless apps can be scaled horizontally (adding more replicas) without data consistency issues.
+> - **High Availability**: Deployments ensure there are always a specified number of running pods, even in case of failures.
+> - **Simplicity**: Stateless applications don't require complex storage configurations, making it straightforward to deploy and manage them with Deployments.
+> - **Resiliency**: If a pod fails, Kubernetes will restart it without data loss since the state is not tied to the pod itself.
 
 #### Data Governance
 

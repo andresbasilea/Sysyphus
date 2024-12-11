@@ -11,12 +11,6 @@ Joe Reis (OREILLY, *Fundamentals of Data Engineering*, 2022), enlists the princi
 8. Prioritize security
 9. Embrace FinOps
 
-
-
-
-
-
-
 #### **Some Best Practices:**
 - Data Products Approach
 - Leverage Data versioning

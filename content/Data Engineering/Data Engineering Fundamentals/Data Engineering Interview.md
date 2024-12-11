@@ -13,6 +13,47 @@ draft: true
 ![[Pasted image 20241204194648.png]]
 
 
+### Present Yourself
+
+Hi! My name is Andrés Basile, I am 25 years old. I was born in Argentina, but I have been living in Mexico for almost my whole life. I am a Computer Engineer passionate about data, data engineering and Artificial Intelligence, topics which I specialized on during my time at college at the National Autonomous University of Mexico, from which I graduated as the second best average of my generation. 
+
+I currently work as a Presales Engineer which means that I am the middleground between the technical specialists and the commercial area of the company I work on. The company is called Edicom, which is a technology and SaaS solutions provider based off in Valencia, Spain,  where I lived and worked for a couple of months this year. My work mainly consists on translating business requirements into technical architectures. or transforming the need into a design which fits our current technical platform. 
+
+At my time in college I gained foundational knowledge in software development, data engineering, and Artificial Intelligence, and I have also proactively taken steps to grow my expertise by developing my own projects, taking courses and consolidating my knowledge with certifications such as the Google cloud Professional data engineer certification. 
+
+I am also a great advocate of what is called "learning in public", I currently write blog entries on my personal website, trying to transmit my experience and knowledge, and I think this translates perfectly into a business environment where it is crucial to be able to communicate our learnings, our wrongdoings and do so effectively to try and build a team of peers that can adapt and overcome any type of project. 
+
+Looking ahead, I am ready to step into a full data egineering or data platform engineer role, where I can continue to grow my technical skills and eventually become an expert in the field. I am very happy of being here and having the opportunity to continue to grow professionally and as a person in such a prestigious company as Marsh McLennan. 
+
+
+### Strengths
+
+- Honesty: I firmly believe that it is better to say "I don't know" than to try and invent some answer. 
+- Responsible: I am very responsible person, not only in the sense of fulfilling my obligations or responsibilities within the estimated time frame, but also in the sense of holding myself accountable for my mistakes. 
+- Avid and fast learner: I love learning new topics, new technologies, working on new projects and I believe that I can do so very quickly, specially regarding the topics that I love most.  I tend to put the upmost passion into what I am doing and I believe this is a great catalyst for growth. 
+- 
+
+### Weaknesses
+- I believe that regarding this specific role, one of my weaknesses might be that I have limited formal experience in managing data platforms independently. However, I have been proactively seeking opportunities to develop these skills and I have even taken steps on my current role to try and make it more data and technically oriented by taking ownership of small initiatives like analyzing response times on our solutions, or studying our technical architecture to understand it and communicate it with my peers and even potential clients.
+- Limited exposure to certain tools or platforms like NiFi, IDMC, or some AWS solutions. I view this as an opportunity for growth and I want to be able to apply these technologies in real-world projects. 
+
+
+### Difficult time professionally 
+
+From my experience working in technical and middle-ground positions, one of the most enduring professional challenges I’ve faced is aligning people and fostering collaboration to achieve a common goal. For example, on my current job, commercial and sales ideas might be far from technical possibilities, and having to frame a project taking into account these different mindsets can be challenging. However, I believe that there is a possibility of merging technical and business decisions by fostering open communication, setting clear expectations, and translating technical constraints into business-friendly language, and vice versa.  
+
+### Great professional achievements
+
+### Cons of current job
+
+The aspects I find least fulfilling about my current position are the limited opportunities for innovation and creative problem-solving. Additionally, I feel that the focus on monitoring minor details, such as punctuality, sometimes overshadows an emphasis on achieving impactful results. This has led me to seek a role where creativity, innovation, and results-oriented work are more highly valued and supported.
+
+### Pros of current job
+
+
+
+
+
 
 ### TODO
 

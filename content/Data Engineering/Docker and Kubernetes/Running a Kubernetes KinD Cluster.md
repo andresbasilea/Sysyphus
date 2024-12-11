@@ -72,3 +72,63 @@ To clean up, we will delete the namespace. Deleting the namespace **recursively*
 - `kubectl delete -f Namespace.yaml`
 
 
+### Working with ReplicaSets
+
+- First, we create a namespace as we did on previous steps. This time, we create the *04--replicaset* namespace.
+- We will use the following yaml file to create one ReplicaSet with 3 pods running the niginx-minimal container. 
+	- ![[Pasted image 20241207130904.png]]
+	- To create the ReplicaSet, we use: `kubectl apply -f ReplicaSet.nginx-minimal.yaml`
+	- We can check the replica sets using `kubectl get rs`
+		- ![[Pasted image 20241207132228.png]]
+	- And we can see the running pods (3, because we defined 3 replicas)
+	- ![[Pasted image 20241207132300.png]]
+	- If we delete one of the replicas, the ReplicaSet will automatically run a new pod. 
+		- ![[Pasted image 20241207132441.png]]
+
+ReplicaSets are great for maintaining a static definition of a pod and keeping the number of instances we want alive. However, the ReplicaSet can't handle changing the specifications of a pod. For that, we use **Deployments**.
+
+### Using Deployments
+
+Lets apply the minimal deployment configuration for a nginx webserver: 
+- `kubectl apply -f Deployment.nginx-minimal.yaml`
+- ![[Pasted image 20241207143726.png]]
+- By running this, we get a Deployment which, in turn, creates a ReplicaSet with 3 replicas of the nginx server. 
+To do a rollout restart of pods inside a deployment, we can run: 
+- `kubectl rollout restart deployment nginx-better`
+- `watch "kubectl get pods"`
+- This will create new pods and replace the old ones and delete them. However, it will keep the old ReplicaSet (now without pods)
+- ![[Pasted image 20241207144523.png]]
+
+
+### Working with Services
+
+We will create a namespace and a deployment as we have done previously. Then, we will create the clusterIP Service by using the command: 
+- `kubectl apply -f Service.nginx-clusterip.yaml`
+
+To create a clusterIP service, we use:
+- `kubectl apply -f Service.nginx-clusterip.yaml`
+To create a NodePort Service: 
+- `kubectl apply -f Service.nginx-nodeport.yaml`
+To create a LoadBalancer Service: 
+- `kubectl apply -f Service.nginx-loadbalancer.yaml`
+
+We can check the services currently running by using `kubectl get svc`
+![[Pasted image 20241207153331.png]]
+
+Note that the LoadBalancer has (although in the image appears as pending as KinD cluster does not have support for LoadBalancer service) both a cluster IP address and an external IP address.  
+
+### Creating Jobs on the cluster
+
+The tasks to run a Job based off a Pod: 
+![[Pasted image 20241207154622.png]]
+
+The Pod *echo-date-minimal* only prints out the current date. However, we can configure the Pod on a better way, by adding limits on CPU and RAM use, parallelism ( in the example it shows that we are running up to 2 copies of the Pod in parallel), completions (in the example we have 2 completions meaning the Job will run the Pods in parallel until we have 2 completions of the process inside the Pods), activeDeadlineSeconds (how many seconds should it run before Kubernetes kills the Job).
+
+![[Pasted image 20241207154724.png]]
+
+On the task 2, we create a Pod to run our echo date application. This will probably run the code to echo the current date. However, we have no way of tracking the completion of this workload, or if a problem had appeared, we wouldn't have ran again the Pod. This is were Jobs come handy, as they allow to track the completion of tasks and define restart and backoffLimit policies. 
+
+To list jobs, use: 
+- `kubectl get jobs`
+
+

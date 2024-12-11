@@ -147,6 +147,7 @@ To delete:
 ### Pod
 - The smallest deployable unit. The foundational building block of Kubernetes workloads. Where our containers will be run. 
 - We almost never create a pod directly. 
+
 ![[Pasted image 20241207111712.png]]
 - A pod can contain multiple containers
 - Containers within a pod share network and storage
@@ -163,7 +164,90 @@ To delete:
 	- DNS policies
 
 
+### ReplicaSet
+- Adds the concept of *replicas*
+- Almost never created directly
+- *Labels* are the link between ReplicaSets and Pods. We need to make sure that whatever we add on *matchLabels* on the *selector* matches with the *template*'s *labels*. That's how the controller maintains the link between the ReplicaSets and the Pods. 
+- ![[Pasted image 20241207130032.png]]
+- We can specify a number of pod replicas we want running at the same time. 
 
+ReplicaSets are great for maintaining a static definition of a pod and keeping the number of instances we want alive. However, the ReplicaSet can't handle changing the specifications of a pod. For that, we use **Deployments**.
+
+### Deployments
+- The deployment controller adds the concepts of *rollouts* and *rollbacks*. You can specify how you want the pods to change as you go from one version to the next. 
+- Deployment helps to smoothly roll from one version of a pod to the next or one configuration to the next. 
+- For any stateless application running on Kubernetes, Deployments are very used! See more on [[Data Engineering Concepts#Stateless Applications]]
+![[Pasted image 20241207133520.png]]
+
+
+### Service
+A services is a type of load balancer across replicas of our application. This makes our applications accessible internally or accessible outside the cluster as well. The Services will use pod labels to determine which pods to serve traffic to. 
+
+There are 3 main types of services: 
+- ClusterIP: Internal to cluster (default)
+- NodePort: Listens on each node in cluster
+- LoadBalancer: Provisions external load balancer. Provisions a Cloud Provider load balancer. 
+
+![[Pasted image 20241207150206.png]]
+
+
+### Job
+
+We saw that the Deployment was the correct resource type for our long-running stateless applications. However, that's not the only type of application that we want to deploy to Kubernetes. There are also applications that we want to run to completion, and that's where the resource type *Job* comes into play. 
+
+We are adding to the pod the idea of one or more completions for a particular container. Example with *busybox* image. 
+![[Pasted image 20241207154145.png]]
+
+The Job on the right will create the busybox image container, run the *date* command and then never restart the container. The specifications on the standalone Pod on the left translates exactly to what we see on the Job on the right. 
+
+The *backoffLimit* on the right shows how many times, if it were to fail on the first time, it should try to complete that Job. 
+
+
+### CronJob
+
+- Adds the concept of a "schedule". The schedule is defined as a String. 5 asterisks mean run every minute. 
+- Used for periodic execution of workloads.
+
+![[Pasted image 20241207161846.png]]
+Use *crontabguru* to learn how to specify different schedules for the CronJobs.
+
+
+### DaemonSet
+
+- Runs a copy of the specified pod on all (or a specified subset of) nodes in the cluster. 
+- Useful for applications such as:
+	- Cluster storage daemon
+	- Log Aggregation
+	- Node Monitoring
+
+
+### StatefulSet
+- Quite similar to a Deployment, but design for stateful workloads. 
+- Pods get sticky identity (pod-0, pod-1, etc.), rather than having a random hash. 
+- Each pod mounts separate volumes (on the contrary, within a Deployment, if we would have used persisten volumes, each replica would have shared a single volume)
+- Rollout behaviour is ordered (in sequence rollout: 1,2,3,... In a Deployment, there is no defined sequence).
+- Enables configuring workloads that require state management (e.g. if one of the pods is the primary database and other pods are read-replica for a database).
+
+
+### ConfigMaps 
+
+A ConfigMap is an API object used to store non-confidential data in key-value pairs. A ConfigMap allows you to decouple environment-specific configuration from your container images, so that applications are easily portable. 
+
+> [!danger] Caution:
+> ConfigMap does not provide encryption. If the data you want to store is confidential, use a Secret rather than a ConfigMap.
+
+- Enables environment specific configuration to be decoupled from container images. 
+- Two primary styles:
+	- Property like (MY_ENV_VAR = "MY_VALUE")
+	- File like (conf.yml = multi-line string)
+![[Pasted image 20241209214708.png]]
+![[Pasted image 20241209214720.png]]
+### Secrets
+We have seen ConfigMaps... however, inevitably, there will be some configuration that we want to keep private. For this, we can use the Kubernetes Secrets resource. 
+- Similar to ConfigMaps (mount them via environment variables or yaml file), but with one difference:
+	- Data is base64 encoded (this is to support binary data and is NOT a security mechanism)
+Example loading a base64-data Secret, and only loading the *foo* key to the environment variables:
+![[Pasted image 20241209215446.png]]
 
 
 

@@ -2,6 +2,9 @@
 > [!abstract] Kubernetes
 > Also known as K8s, Kubernetes is an open source platform for automating deployment, scaling and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery
 
+> [!info] About these notes
+> I used the official [Kubernetes documentation](https://kubernetes.io/docs/home/) and this [youtube video](https://www.youtube.com/watch?v=2T86xAtR6Fo) as sources.
+
 Containers are a good way to bundle and run applications. In a production environment, you need to manage the containers that run the applications and ensure that there is no downtime. If a container goes down, another one needs to start. This behavior should be handled by a system automatically, and here is were Kubernetes comes into play. 
 
 ### Some of the Kubernetes Features
@@ -248,6 +251,71 @@ We have seen ConfigMaps... however, inevitably, there will be some configuration
 	- Data is base64 encoded (this is to support binary data and is NOT a security mechanism)
 Example loading a base64-data Secret, and only loading the *foo* key to the environment variables:
 ![[Pasted image 20241209215446.png]]
+
+
+### Ingress
+- Enables routing traffic to many services via a single external LoadBalancer
+- Many options to choose from: Ingress-nginx, HAProxy, Kong, Istio, Traefik... 
+- Only officially supports layer 7 routing (e.g. http/https, but some implementations allow for layer 4 (tcp/udp). 
+- A newer API is available (Gateway API)
+
+![[Pasted image 20241211105330.png]]
+
+### Gateway API
+- Evolution of the Ingress API
+- Not to be confused with an "API Gateway", the generic concept of a cloud resource that can take API calls an route them to various services.
+- Adds support for TCP/UDP
+- Handles more advanced routing scenarios than Ingress.
+
+
+### PersistentVolume and PersistentVolumeClaim
+
+- How to store data across container restarts.
+- 
+- Provides API for creating, managing and consuming storage that lives beyond the life of an individual pod.
+- Access modes:
+	- ReadWriteOnce (and new ReadWriteOncePod)
+	- ReadOnlyMany
+	- ReadWriteMany
+- Reclaim Policy: Retain vs Delete (whether or not when the persistenvolume claim is deleted, the volume is deleted as well. Retain might leave unattached volumes in your cluster)
+
+![[Pasted image 20241213093953.png]]
+
+
+### HorizontalPodAutoscaler (HPA)
+- Scale workloads horizontally
+- It is implemented as a Kubernetes API resource and a controller and periodically adjusts the number of replicas in a workload to match observed resource utilization such as CPU or memory usage.
+
+### RBAC (Service Account, Role, RoleBinding)
+- Provides applications (or users) access to the Kubernetes API
+- Access can be granted by namespace OR cluster wide
+- Each of the previous resources can be related to certain roles and access permissions, to allow access and edit permissions only to specific users.
+
+### Labels and Annotations
+**Labels**
+- Labels are key-value pairs used to identify and organize Kubernetes resources
+- Can be used to filter api-server queries (e.g. with kubectl)
+**Annotations**
+- Key-value pairs used for non-identifying metadata
+- Used for things like configuration details, deployment history
+- Often used by tools to configure specific behaviors (e.g. ingress annotations)
+
+
+## Helm
+
+### What is helm?
+- De-facto standard for distributing software for Kubernetes
+- Combination of:
+	- Package manager
+	- Templating engine
+- Primary use cases:
+	- Application deployment
+	- Environment management
+- Commands
+	- `helm install / helm upgrade`
+	- `helm rollback`
+
+![[Pasted image 20241213112028.png]]
 
 
 

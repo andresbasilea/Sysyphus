@@ -23,7 +23,9 @@ At my time in college I gained foundational knowledge in software development, d
 
 I am also a great advocate of what is called "learning in public", I currently write blog entries on my personal website, trying to transmit my experience and knowledge, and I think this translates perfectly into a business environment where it is crucial to be able to communicate our learnings, our wrongdoings and do so effectively to try and build a team of peers that can adapt and overcome any type of project. 
 
-Looking ahead, I am ready to step into a full data egineering or data platform engineer role, where I can continue to grow my technical skills and eventually become an expert in the field. I am very happy of being here and having the opportunity to continue to grow professionally and as a person in such a prestigious company as Marsh McLennan. 
+Looking ahead, I am ready to step into a full data egineering or data platform engineer role, where I can continue to grow my technical skills and eventually become an expert in the field. 
+
+I am very happy of being here and having the opportunity to continue to grow professionally and as a person in such a prestigious company as Marsh McLennan. 
 
 
 ### Strengths

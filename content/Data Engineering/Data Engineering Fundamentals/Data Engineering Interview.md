@@ -13,6 +13,17 @@ draft: true
 ![[Pasted image 20241204194648.png]]
 
 
+### Software One
+
+Of course! SoftwareOne is a global provider of software solutions and cloud technology services, headquartered in Switzerland. It was founded in 2000 and now has a strong global presence with over 9,000 employees. The company focuses on delivering end-to-end technology services, helping clients with their digital transformation, modernizing their IT strategies, and optimizing operational efficiency. I also understand that SoftwareOne emphasizes ensuring high-quality service while supporting businesses in managing and optimizing their software and cloud investments. It’s impressive how the company integrates innovation with customer-centric solutions.
+
+SAM - It involves the processes and technologies for managing and optimizing the purchase, deployment, maintenance, utilization and disposal of software applications within an organization. 
+
+1985: Softwarepipeline
+Laura reyes sería mi jefa
+
+
+
 ### Present Yourself
 
 Hi! My name is Andrés Basile, I am 25 years old. I was born in Argentina, but I have been living in Mexico for almost my whole life. I am a Computer Engineer passionate about data, data engineering and Artificial Intelligence, topics which I specialized on during my time at college at the National Autonomous University of Mexico, from which I graduated as the second best average of my generation. 
@@ -26,7 +37,6 @@ I am also a great advocate of what is called "learning in public", I currently w
 Looking ahead, I am ready to step into a full data egineering or data platform engineer role, where I can continue to grow my technical skills and eventually become an expert in the field. 
 
 I am very happy of being here and having the opportunity to continue to grow professionally and as a person in such a prestigious company as Marsh McLennan. 
-
 
 ### Strengths
 

@@ -1,3 +1,6 @@
+---
+draft: true
+---
 
 > [!info] About this project
 > I created this note to explain the Kubernetes Demo Application showecased on this [youtube video](https://www.youtube.com/watch?v=2T86xAtR6Fo)

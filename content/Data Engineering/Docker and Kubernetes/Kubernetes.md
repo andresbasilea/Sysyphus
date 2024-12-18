@@ -304,7 +304,7 @@ Example loading a base64-data Secret, and only loading the *foo* key to the envi
 ## Helm
 
 ### What is helm?
-- De-facto standard for distributing software for Kubernetes
+- De-facto standard for distributing software that's going to run on Kubernetes. Many tools are installed to kubernetes via Helm. 
 - Combination of:
 	- Package manager
 	- Templating engine
@@ -317,6 +317,16 @@ Example loading a base64-data Secret, and only loading the *foo* key to the envi
 
 ![[Pasted image 20241213112028.png]]
 
+- On the diagram, we see that on the templates side we have resource definitions for Kubernetes. 
+- On the metadata, we have the file *values.yaml*, which is going to be the interface with which we can configure and customize the templates. We can specify a set of values in the values file and those will get inserted into the templates. 
+
+When we install a Helm Chart, it is going to create a *release* inside the cluster. 
+
+#### Features inside Helm
+- Metadata (you can reference: Chart / Release / Values)
+- Variables
+- Conditionals (if)
+- Loops (range)
 
 
 

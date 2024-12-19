@@ -11,6 +11,9 @@
 [[Unstructured Data Streaming]]
 ![[Pasted image 20241118184816.png]]
 
+### Kubernetes Demo Application (in progress)
+[[Kubernetes Demo Application]]
+
 ### Realtime Voting System
 [[Realtime Voting System]]
 ![[Pasted image 20241125174751.png]]

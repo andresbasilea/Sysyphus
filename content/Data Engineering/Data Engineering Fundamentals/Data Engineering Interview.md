@@ -9,10 +9,6 @@ draft: true
 
 
 
-
-![[Pasted image 20241204194648.png]]
-
-
 ### Software One
 
 Of course! SoftwareOne is a global provider of software solutions and cloud technology services, headquartered in Switzerland. It was founded in 2000 and now has a strong global presence with over 9,000 employees. The company focuses on delivering end-to-end technology services, helping clients with their digital transformation, modernizing their IT strategies, and optimizing operational efficiency. I also understand that SoftwareOne emphasizes ensuring high-quality service while supporting businesses in managing and optimizing their software and cloud investments. It’s impressive how the company integrates innovation with customer-centric solutions.

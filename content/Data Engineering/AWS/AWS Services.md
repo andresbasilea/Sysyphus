@@ -2,7 +2,7 @@
 
 | Service                                  | Description                                                                                                                                                           | Name in other platforms |
 | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| AWS EC2 Elastic Compute Cloud            | Compute capacity. Deploy applications without the need to invest in hardware upfront.                                                                                 |                         |
+| AWS [[EC2]] Elastic Compute Cloud        | Compute capacity. Deploy applications without the need to invest in hardware upfront.                                                                                 |                         |
 | Amazon RDS (Relational Database Service) | Postgre, MySQL and other database engines provisioned managed service.                                                                                                |                         |
 | Amazon S3                                | Object storage                                                                                                                                                        |                         |
 | Amazon Lambda                            | Permits you to run code without owning or managing servers. Pay only for compute time consumed.                                                                       |                         |

@@ -1,6 +1,9 @@
 
 ### Intro to Docker
 [[Intro to Docker]]
+
+### Courses
+[[Courses]]
 ### Dockerfile and Docker Compose
 [[Dockerfile vs Docker Compose]]
 

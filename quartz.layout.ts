@@ -19,7 +19,7 @@ export const sharedPageComponents: SharedLayout = {
         categoryId: 'DIC_kwDONRQ31s4CluPJ',
       }
     }),
-  ],,
+  ],
   footer: Component.Footer({
     links: {
       //GitHub: "https://github.com/jackyzha0/quartz",

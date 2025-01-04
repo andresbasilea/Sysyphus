@@ -1,6 +1,7 @@
 ---
 title: A Journal by Andrés Basile
 date: false
+comments: "false"
 ---
 
 ## What can you expect?

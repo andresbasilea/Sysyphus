@@ -11,3 +11,7 @@
 [[Creating a Google Kubernetes Engine Cluster]]
 ### Running a Kubernetes KinD cluster
 [[Running a Kubernetes KinD Cluster]]
+
+### Running Minikube
+[[Running Minikube]]
+

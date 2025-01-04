@@ -154,5 +154,28 @@ A general way to define a container image is via a Dockerfile. It contains the s
 
 Once we have built an image, we then need to store it somewhere that our cluster can use (**the container registry**).
 
+There is a way to build multi-architecture images to overcome the architecture incompatibility issues (for example if you are building/developing on a Mac Silicon, but want to deploy on a x86). 
 
+```
+Single Architecture: docker build -t IMAGE_REPO:IMAGE_TAG .
+```
+
+```
+Multi-Architecture: docker buildx build \ 
+					--platform linux/amd64.linux/arm64 \
+					-t IMAGE_REPO:IMAGE_TAG \
+					-push \
+					.
+```
+
+
+### Deploying the Demo Application
+
+![[Pasted image 20250101125455.png]]
+
+- We will use Deployments for our stateless components. 
+- StatefulSet for DB (via Helm chart)
+- Services provide stable network endpoints
+- Ingress routes traffic from outside of the cluster
+- ConfigMaps and Secrets for configuration
 

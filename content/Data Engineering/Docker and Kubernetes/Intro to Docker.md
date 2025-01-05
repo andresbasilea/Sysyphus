@@ -20,6 +20,28 @@ Docker:
 	However, if we do changes in the image, for example downloading a package, and then we run the docker run command again, the changes we did won't be saved.  --> [[Dockerfile]]
 	
 
+Three main components: 
+- Docker Daemon
+- Docker Client
+- Docker Image Registry
+
+Docker client and daemon create a type of client server architecture, where the Docker client serves as client and the daemon as the server. 
+
+The **docker client** provides the developer a way to interact with Docker with a CLI, with commands such as `docker build`, `docker run` and `docker stop`.
+
+The **docker daemon** is installed on the host machine and it serves as the brain of docker that creates and manages the docker images. 
+
+The **Image Registry** is the place for you to store the images you create or download. 
+
+![[Pasted image 20250104222636.png]]
+
+A container is simply a running instance of a docker image. 
+
+#### Dockerfile
+
+A **Dockerfile** is a text document that contains instructions on how to build your container image. A Dockerfile includes instructions for what base layer to use (for example, whether you want to use a minimal version of Linux or use an image that has preinstalled software, such as a database engine). Other instructions include running commands in the container, or copying your application data, dependencies, and configurations into the container.
+
+
 ### Why does Docker ask for `sudo`?
 
 The Docker daemon binds to a Unix socket, not a TCP port. By default, the `root` user owns the Unix socket (so you need `sudo` to access it). The Docker daemon always runs as the `root` user. 

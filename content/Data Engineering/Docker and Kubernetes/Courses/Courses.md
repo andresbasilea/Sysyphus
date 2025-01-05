@@ -1,7 +1,7 @@
-Some interesting courses
 
-https://www.coursera.org/learn/containerized-applications-on-aws
+### Kubernetes in AWS - Create cluster in EKS in own VPC
+[[Kubernetes in AWS - Create Cluster in EKS in your own VPC]]
 
-https://www.coursera.org/projects/kubernetes-in-aws-create-cluster-in-eks-in-your-own-vpc#outcomes
+### Containerized Applications on AWS
+[[Containerized Applications on AWS]]
 
-https://www.coursera.org/specializations/architecting-google-kubernetes-engine

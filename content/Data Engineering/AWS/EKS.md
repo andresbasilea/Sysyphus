@@ -62,3 +62,7 @@
 3. **Deploy Applications:**  
     Use `kubectl` or CI/CD pipelines to manage workloads.
 
+
+Amazon EKS is a managed container service to run Kubernetes on AWS. 
+![[Pasted image 20250105171325.png]]
+AWS hosts the Kubernetes control plane side of things, and the containers run in a cluster. The cluster can be made of EC2 instances or AWS managed Fargate resources. 

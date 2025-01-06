@@ -1,4 +1,6 @@
 
+# Course
+https://www.coursera.org/learn/containerized-applications-on-aws
 ## Containers 
 
 - Concepts comes from shipping containers. No matter what is inside the container, the operation of the containers remains the same. 
@@ -25,7 +27,6 @@ One of the main advantages of containers is that you can scale them faster and e
 - Scalability 
 - Developer productivity
 - Portability
-
 
 ## Docker
 
@@ -112,4 +113,135 @@ It serves applications on secure HTTPS endpoints. The endpoint is shown in the c
 > If you need to serve an application with finer-grained controls over the infrastructure hosting your containers, maybe you should consider serving on EC2 instance or take advantage of ECS or EKS. 
 
 
+## Hosting Containers on AWS Overview
+
+#### Amazon Elastic Container Service
+Amazon ECS is a fully managed container orchestration service. 
+![[Pasted image 20250105171207.png]]
+ECS handles the scheduling or placement of containers on the cluster. Compute resources can be EC2 isntances on your account or you can use AWS Fargate resources that are managed by AWS.
+
+#### Amazon Elastic Kubernetes Service
+Amazon EKS is a managed container service to run Kubernetes on AWS. 
+![[Pasted image 20250105171325.png]]
+AWS hosts the Kubernetes control plane side of things, and the containers run in a cluster. The cluster can be made of EC2 instances or AWS managed Fargate resources. 
+
+#### AWS Lambda
+AWS Lambda is a serverless compute service. You hand the code to Lambda and the code is run on AWS infrastructure. You don't worry about the infrastructure or servers running the code. 
+
+#### AWS Batch
+Service for your batch computing workloads.
+- Jobs
+- Compute environments
+- Job definitions
+- Queues
+
+#### Amazon SageMaker
+Amazon SageMaker is a service to build, train, and deploy machine learning models. 
+
+#### AWS CodeBuild 
+Fully managed continuous integration (CI) service that compiles source code, runs tests, and produces software packages for development teams. 
+
+#### AWS Elastic Beanstalk 
+Service for deploying and scaling web applications. 
+AWS Elastic Beanstalk automatically handles the deployment and configuration of EC2 instances, load balancer, autoscaling, and health monitoring resources in your account. 
+
+#### What’s the difference between Amazon Elastic Compute Cloud (Amazon EC2) and containers? 
+Amazon EC2 is an AWS service that provides virtual machines on demand. Containers can be hosted on top of Amazon EC2, which you will learn more about in Week 2 of the course.
+
+## Microservices and the Corporate Directory Application
+
+- Applications can be decomposed in different services. 
+- Each service can be developed, deployed and maintained independently of the others. 
+- Services talk to each other via network protocols and normally use some sort of API. 
+
+The **Corporate Directory** application that we will be using for this section is composed of two services: a Flask Python Frontend and a .NET web API for CRUD operations on employees. We will use a DynamoDB for persistence, allowing containers to be stateless (NO storing on services. They can be terminated and re-created without losing data). 
+
+## Multi-Container Deployments and Docker Compose Demostration
+
+To work with multi container deployments locally, you can use Docker Compose. 
+An example Docker Compose Yaml file:
+
+![[Pasted image 20250105183702.png]]
+
+Here we can see 4 services defined. A **service** is a computing resources backed by one or more containers. In this example, each service is running a single container. A service specifies a Docker image and the parameters used to launch the container. 
+
+- In the previous example, the first service is defining the Dockerfile to create the container on the ./directory-frontend path. We then have a setting for port mapping and environment variables to configure the application. 
+
+- The directory-service service also points to a directory that has a Dockerfile. This service is building the .NET API. 
+
+- The local-dynamo runs a local simulation container of DynamoDB. Convenient for local testing. 
+
+- The setup-dynamo service is running another Amazon maintained image that runs the amazon CLI. 
+
+#### Building and running the Docker Compose defined containers
+
+To build the Docker Compose file, we use `docker-compose build`
+To run, we use the `docker-compose up -d` (detached)
+
+To see the current status of the containers, we can use `docker-compose ps`
+
+
+The containers we have created **need to talk to each other.** When we use the docker compose up, Docker creates a network and adds the containers to that network. 
+
+We also have dependencies between containers. In the previous example, the setup-dynamo service needs to wait for the local-dynamo container to start running and available. 
+
+Networking performed on the Docker Compose file from the previous example can be seen on the directory-frontend service, where the API_ENDPOINT environment variable defines the hostname. We connect to the container port, not the port on the host. 
+
+Resilient systems -> Adding retry logic. 
+
+
+## Container Orchestration and Amazon ECS
+
+#### Container Orchestration Platforms 
+- Run and stop containers
+- Configure network specifications
+- Manage permissions
+- Integrate with external resources and services
+
+#### ECS and EKS
+
+- Both container orchestration platforms.
+- They are able to start, stop, manage and scale container workloads. 
+- The way they perform the previous jobs and the tooling available differs per platform.
+
+#### Container Orchestration Platform Control Plane and Data Plane
+![[Pasted image 20250105190621.png]]
+
+- Control Plane: Responsible for provisioning software, any user or service-requested configurations,  and managing lifecycle of resources. Helps data plane do its work. 
+- Data Plane: Provides the capacity to perform whatever work the control plane requests to be done. 
+
+For example, **ECS is considered the Control Plane** and the compute plane is called the Data Plane. The interaction with the Control Plane is performed via API. The Data Plane, in this case, is a cluster where your containers are hosted (like Amazon EC2 instances). 
+
+A cluster is the logical grouping of compute resources, and there are different types of launch types that you can use (like EC2 or the serverless Fargate).
+
+
+#### Task definition on ECS
+To prepare your containerized application to run in ECS, you first create what is called a task definition. It is a blueprint for the deployment. Used to specify various parameters for your application, like what Docker image to use, how much CPU and memory to use for each container, the Launch type (EC2 or Fargate), Docker networking mode, Logging configuration, Data volumes, IAM roles, Customizations, etc. 
+
+Once you create the task definition, you can run the task. The task is the instantiation of a task definition within a cluster. 
+
+Other ECS key terms: 
+
+![[Pasted image 20250105193539.png]]
+
+
+## Amazon ECS scheduling engine
+
+The ECS scheduling engine provides logic around when to start and stop containers. Makes the necessary calls to the control plane. There are different types of schedulers: 
+
+- **Service Scheduler**: You can use it to specify how you want your task to run and how many copies of the task you want to run. It will maintain this number and reschedule tasks if they fail. It also allows for the daemon scheduling strategy, making sure that a specific task is running at all times on every node in your cluster. This **daemon strategy** may be ideal for logging or monitoring tasks, where all nodes need to have it. 
+- **Cron-like schedule**: Using Amazon EventBridge. Set up recurring tasks (such as daily backups or log scans) on a cron-like schedule with EventBridge. 
+
+#### How to determine the optimum instance to place a task
+
+This is where the ECS *placement engine* comes in. It places a task on an Amazon ECS instance and runs it in the chosen configuration (proper amount of memory, proper CPU space). The placement engine looks at *constraints* and *strategies* for placement: 
+
+![[Pasted image 20250106142457.png]]
+
+However, you can combine *binpack* and *spread* strategies in ECS. For example, if you want to optimize costs, but also need high availability:
+
+![[Pasted image 20250106142751.png]]
+
+
+## Scaling and Service Discovery with ECS
 

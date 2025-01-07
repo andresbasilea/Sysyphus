@@ -293,4 +293,53 @@ Now, let's add this task to our cluster. Go to the cluster we just created and c
 
 By clicking on deploy, the ECS scheduler will find an instance on our fleet to run the task. If we then see the logs of our task, we will find that the same commands we previously ran locally have been run by our EC2 instances on our ECS cluster. 
 
+## Troubleshoot issues with ECS
 
+![[Pasted image 20250107162452.png]]
+
+- In the console, you can see notifications from the ECS service (events like containers being launched in the cluster). From the ECS service, you can drill into specific tasks, this shows stopped containers failures and logs.
+- You can use ECS Exec to run a shell inside the ECS hosted container, extracting ECS host logs. 
+
+More here: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/troubleshooting.html
+
+## Follow Best Practices
+
+ECS is a very complete container service. However, managing it requires knowledge about the best practices. You can find them here: 
+
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-best-practices.html
+
+
+
+
+## Introduction to AWS Fargate
+
+We have already talked about the EC2 launch type, or capacity provider using EC2 instances, to make up the cluster your containers are placed on. You can setup the instances, etc. However, there can be quite the overhead when doing this. AWS Fargate is a serverless compute engine and hosting option for container-based workloads. This means no provisioning infrastructure, no setting up your cluster scaling and no server management. 
+
+You will configure what container image you want to use; how much memory and VCPU is going to be needed; any network configuration, like what VPCs, subnets, and security groups you want to use; any IAM permissions needed for your container, and then you can run the container on a Fargate cluster. Fargate manages the provisioning, auto scaling, and maintenance of this cluster for you. A few other things to note about AWS Fargate are that you don't pay per instance, hour, or second like you would with EC2. Instead, you only pay when your container is running, and when your container isn't running, you stop incurring charges.That is one of the major benefits of using AWS Fargate.
+
+Fargate can be a really great option for use cases where you want to be able to run containers without having to provision or manage EC2 instances for your cluster. When using Fargate, you don't pay for idling resources because it's a serverless service, so this can also make it a very cost-effective option.
+
+## Amazon ECS on AWS Fargate Demonstration
+
+For this demo, we will first create a task definition. We will select fargate as the launch type compatibility. Then, select a name and a networking option. Networking options are shown below:
+
+![[Pasted image 20250107163642.png]]
+AWSVPC mode gives the network the same properties as an EC2 instance. 
+
+
+![[Pasted image 20250107163730.png]]
+Bridge mode allows to use Docker's built-in network, which runs inside of each Amazon EC2 instance hosting the task. 
+
+![[Pasted image 20250107163813.png]]
+Allows the task to bypass the Docker built-in network, and map to container ports directly to the network interface of the Amazon EC2 instance hosting the task. Because of this, you can't run multiple instantiations of the same task on a single Amazon EC2 instance when port mappings are used. 
+
+After selecting the networking type, Fargate will ask how much CPU and memory you want to reserve for your task. You need to assign the right amount, as assigning too little might end up in the Fargate task not running. 
+
+Once that is defined, you can complete the definition of the task by adding the port mappings and clicking on *create*. 
+
+Now, we need to launch this  task into our cluster by using a service. We will go to clusters inside ECS and select the cluster we want to run our task on. Once there, we will create a new service with Fargate launch. Then, the service creation wizard will ask us to enter the task definition, where we will choose the name of the task we just created. 
+
+Once we are done, we can enter the service, wait for our task to start running, and inside our task look for its public ip under the *Network* section. Inside a new browser tab, we can write the ip address and access our task container running. 
+
+
+## AWS Copilot

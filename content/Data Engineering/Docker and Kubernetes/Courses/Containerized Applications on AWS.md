@@ -245,3 +245,52 @@ However, you can combine *binpack* and *spread* strategies in ECS. For example, 
 
 ## Scaling and Service Discovery with ECS
 
+- Scale cluster first, and then containers inside it. 
+- **Scaling cluster** first implies having VPCs, subnets, EC2 instances, etc. and a way to scale it all. AWS has *capacity providers*, which takes the heavy lifting of infrastructure setting up and managing capacity, letting you focus on application development. 
+- For **scaling containers**, you can scale them up or down. You can use *service autoscaling* for this. Automatic scaling is the ability to increase or decrease the desired count of tasks in your ECS service, based on metrics or demand. 
+
+#### AWS Cloud Map
+AWS Cloud Map is a cloud resource discovery service that natively integrates with Amazon ECS and other services. With AWS Cloud Map, you can: 
+- Define custom names for your application resources
+- Maintain the updated location of the dynamically changing resources
+- Create and host service discovery across compute services
+- Increase your application availability
+
+
+
+## ECS Demonstration
+
+We will first create a container a run a series of commands inside it. Let's use the following code: 
+
+```
+docker run amazonlinux:2 bash -c "yum install -y cowsay ; echo 'hello from container' | cowsay"
+```
+
+where `bash` is what we want to run inside our `amazonlinux:2` container and after the -c we define the commands to run inside our bash. 
+
+This is a simple way to run a command inside a container. Now, let's try to run this inside a ECS cluster in AWS. 
+
+First, let's go to AWS ECS -> Clusters and click on *create cluster*:
+![[Pasted image 20250107121339.png]]
+
+Then, add a name to the cluster and configure the networking. For this exercise, we will use the default VPC and subnets. 
+
+![[Pasted image 20250107121437.png]]
+
+Then, select which type of launch you prefer. In this case, we will select AWS EC2 instances. 
+
+We then select the AMI (Amazon Machine Instance) to be Amazon Linux 2 & t2.small, with a minimum capacity of 2 and max of 5. 
+
+Then, click on *create*. This will configure the cluster with EC2 instances. 
+
+Now, to run the task on our cluster, we need to create a `task definition`. A task definition, as we saw earlier, is a group of settings that ECS needs to know to run our containers on our cluster. It defines de Docker images, CPU, memory resources, networking, logging, mounted storage and IAM roles for authentication. 
+
+Our created task definition will look like this: 
+
+![[Pasted image 20250107122529.png]]
+
+Now, let's add this task to our cluster. Go to the cluster we just created and click on *Tasks*. Then *Run New Task*. Here, we will need to change the compute options so that the launch type is EC2, because we want to run our container on our fleet of EC2 instances created for this cluster. We then choose the task definition by family name and revision. Finally, we *Deploy*. 
+
+By clicking on deploy, the ECS scheduler will find an instance on our fleet to run the task. If we then see the logs of our task, we will find that the same commands we previously ran locally have been run by our EC2 instances on our ECS cluster. 
+
+

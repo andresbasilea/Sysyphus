@@ -343,3 +343,18 @@ Once we are done, we can enter the service, wait for our task to start running, 
 
 
 ## AWS Copilot
+
+Until this point, we have taken a manual approach into creating resources in ECS. AWS Copilot is a tool for automating a lot of the steps you would be taking to create an ECS environment and deploy applications. In its simplest usage, Copilot can take your application dockerfile and run all the steps you need to go from dockerfile to hosting a running container on ECS resources. 
+
+When you deploy with AWS Copilot, you are creating three things: an application, an environment and a service. 
+- An application is a logical grouping of resources. An application can have multiple services. 
+- An environment is how you create multiple stages in your application. Under the application, we might have dev, testing and production stages. For every environment you have, Copilot is going to create an ECS cluster and networking resources. 
+- A service is the long-lived application you want hosted inside the ECS cluster . This might be a web application or an internal API service. For every service you create, Copilot will create an ECS service, a task definition, log groups for logging, and roles. 
+
+#### Copilot example
+
+![[Pasted image 20250107170528.png]]
+We use the previous command to initiate a backend service using AWS Copilot for our corpdirectory application. This will automatically create: 
+
+![[Pasted image 20250107170652.png]]
+

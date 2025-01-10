@@ -1,0 +1,10 @@
+
+AWS Copilot is a command line tool that you can use with Amazon Elastic Container Service (Amazon ECS). Copilot automates the creation of many resources that you need to host your container workloads on Amazon ECS. 
+
+To deploy a simple website with AWS Copilot, you need to create three things: an application, an environment, and a service. An application is a logical grouping of resources. An environment is used for different settings and stages of your application (such as testing, staging, and production). Your application can have multiple services, which are where your code lives. Services can be one of several different types. The example application in this course creates two services: a _load balanced web service_ for the frontend, and a _backend service_ for the API.
+
+Each service uses your Dockerfile to define an application container image. Copilot creates Amazon Elastic Container Registry (Amazon ECR) repositories. It then builds and pushes the container images as part of the automated deployment. Copilot creates the Amazon ECS and load balancer resources that are needed to run your service inside Amazon ECS. These resources are different for each service type.
+
+Everything created by Copilot is defined in a manifest file. The manifest file contains all the details that are used to deploy your services, such as scaling the number of tasks hosting your application. Source-controlling your manifest file is a good way to follow some DevOps practices. When the state of your deployed applications is committed to source control, where you have a full history of all changes. By using source control, you can capture much of your team’s knowledge about your applications. If you created Amazon ECS application resources manually, you could lose this knowledge and deployments might no longer be repeatable.
+
+https://www.coursera.org/learn/containerized-applications-on-aws/supplement/Dm61V/reading-2-6

@@ -28,3 +28,7 @@
 
 ### Introduction to Machine Learning
 [[Introduction to Machine Learning]]
+
+
+### Projects
+[[quartz/content/Data Engineering/Google Cloud Platform/Projects/Projects|Projects]]

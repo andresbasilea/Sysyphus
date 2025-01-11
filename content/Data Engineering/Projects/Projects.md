@@ -23,3 +23,7 @@
 
 ### Working with Images II: Brodatz Textures Characterization
 [[Brodatz Textures Characterization]]
+
+### Kubernetes in AWS - Create Cluster in EKS in your own VPC
+[[Kubernetes in AWS - Create Cluster in EKS in your own VPC]]
+

@@ -15,7 +15,7 @@ Aspects of Data Engineering:
 
 
 ### Projects
-[[Projects]]
+[[quartz/content/Data Engineering/Projects/Projects]]
 
 ### Apache
 [[Apache]]

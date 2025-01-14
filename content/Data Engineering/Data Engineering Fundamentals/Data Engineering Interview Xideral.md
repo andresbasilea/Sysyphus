@@ -103,3 +103,17 @@ Que sí puedo hacer?
 A la hora de la entrevista: no tener CV a mano ni en pantalla. Que no se note que esté leyendo. 
 Hacer situaciones tipo STAR. Situacion tarea accion resultado
 
+
+
+
+
+
+### Preguntas a hacer en caso de quedar:
+
+- ENtiendo que durante el periodo del curso, firmaríamos un contrato con Xideral. Una vez finalizado el curso, la empresa que contrata es Accenture directamente, verdad?
+- Me podrías dar más detalle sobre el paquete de compensación y beneficios una vez contratado por accenture?
+- Se firma algún contrato con accenture previo a entrar al curso? 
+- Con accenture, el puesto es de tipo indefinido o por proyecto?
+- Entiendo entonces que el esquema sería home office y asistir a oficinas en CDMX o Monterrey cada cierto tiempo?
+- Cuál sería el nombre del puesto final en accenture?
+- Entraría a un equipo de consultores de accenture donde casi todos están en monterrey, verdad?

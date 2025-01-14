@@ -122,10 +122,10 @@ The aspects I find least fulfilling about my current position are the limited op
 
 ##### GCP Storage Services
 
-| Service         | Description                                                                                                                                                                                                                   |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cloud Filestore | Fully managed file based storage<br>Comparable to AWS EFS or NAS<br>Primary use case is application migration to cloud<br>Backups and snapshots available<br>Support GKE workloads. Multiple pods can have shared file system |
-| GCS             | Infinitely scalable<br>Versioned<br>Object Storage<br>Similar a S3<br>You can setup redundancy, regionality, nearline access, coldline access                                                                                 |
+| Service         | Description                                                                                                                                                                                                                   |     |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| Cloud Filestore | Fully managed file based storage<br>Comparable to AWS EFS or NAS<br>Primary use case is application migration to cloud<br>Backups and snapshots available<br>Support GKE workloads. Multiple pods can have shared file system |     |
+| GCS             | Infinitely scalable<br>Versioned<br>Object Storage<br>Similar a S3<br>You can setup redundancy, regionality, nearline access, coldline access                                                                                 |     |
 
 ##### GCP Databases
 
@@ -217,6 +217,14 @@ DR patterns are considered to be *cold*, *warm*, or *hot*. These patterns indica
 
 
 
+
+
+
+
+
+
+
+
 ## My Questions
 - What are the expectations for the first months in the role and what are the benchmarks for evaluating success?
 - Who will I be working with?
@@ -249,3 +257,233 @@ Bluetab: consultoría:
 	- 1500 pesos para psicólogo jajajaja
 	- 10 mil pesos para cursos y certificados 
 	- becas educativas dependiendo de desempeño 
+
+
+
+
+### ENTREVISTA TÉCNICA CON BLUETAB
+
+
+### Resumen de Preguntas y Respuestas de la Preparación para Entrevista de GCP
+
+#### **Pregunta 1: Diseña un pipeline de datos streaming en GCP**
+
+**Pregunta:** ¿Cómo diseñarías un pipeline de datos en tiempo real que procese datos desde múltiples fuentes y almacene los resultados en BigQuery?
+
+**Respuesta:**
+
+1. Usar **Pub/Sub** para desacoplar las fuentes de datos y manejar la ingesta.
+2. Configurar un job en **Dataflow** para procesar los datos en tiempo real. En Dataflow, implementar transformaciones como parsing, filtrado y agregaciones.
+3. Configurar ventanas y marcas de agua para manejar datos tardíos.
+4. Escribir los resultados procesados directamente en **BigQuery**.
+5. Monitorear el pipeline con **Cloud Monitoring** y configurar alertas para identificar posibles fallas.
+
+---
+
+#### **Pregunta 2: ¿Cómo manejarías datos que llegan tarde a un sistema de análisis en tiempo real?**
+
+**Respuesta:**
+
+1. Implementar **ventanas de tiempo** (ventanas deslizantes o fijas) en Dataflow para segmentar los datos en intervalos procesables.
+2. Utilizar **marcas de agua** para definir cuándo se considera que todos los datos relevantes de una ventana han llegado.
+3. Configurar triggers para procesar datos tardíos, por ejemplo, acumulando los datos recibidos después del cierre inicial de la ventana.
+
+---
+
+#### **Pregunta 3: ¿Qué estrategias implementarías para reducir costos en BigQuery?**
+
+**Respuesta:**
+
+1. Evitar consultas del tipo `SELECT *`.
+2. Usar **particiones** y **clústeres** para optimizar el almacenamiento y las consultas.
+3. Revisar los bytes procesados antes de ejecutar consultas grandes.
+4. Denormalizar datos en tablas siempre que sea posible.
+5. Configurar vistas materializadas para consultas frecuentes.
+6. Monitorear el uso con herramientas como Billing Reports.
+
+---
+
+#### **Pregunta 4: ¿Cómo establecerías un sistema de permisos para analistas en GCP?**
+
+**Respuesta:**
+
+1. Usar el sistema de **IAM (Identity and Access Management)** para asignar roles a los usuarios.
+2. Crear un rol personalizado con permisos específicos (por ejemplo, acceso de solo lectura a ciertos datasets en BigQuery).
+3. Implementar **políticas de acceso jerárquicas** para gestionar permisos a nivel de proyecto, carpeta o recurso.
+
+---
+
+#### **Pregunta 5: ¿Cómo manejarías el monitoreo y la optimización de costos en un entorno de GCP con múltiples servicios?**
+
+**Respuesta:**
+
+1. Implementar **Billing Budgets and Alerts** para definir límites de costos y recibir notificaciones.
+2. Utilizar herramientas como **Billing Reports** para analizar el consumo por servicio.
+3. Aplicar mejores prácticas en cada servicio:
+    - BigQuery: particiones, clústeres, y vistas materializadas.
+    - Dataflow: configuración de autoscaling y tuning de jobs.
+    - Cloud Storage: elegir clases de almacenamiento según los patrones de acceso (Nearline, Coldline).
+4. Monitorear recursos con **Cloud Monitoring**.
+
+---
+
+#### **Pregunta 6: ¿Cómo garantizarías la escalabilidad de una arquitectura de datos en GCP?**
+
+**Respuesta:**
+
+1. Usar **Dataflow** con autoscaling para ajustar los recursos según la carga de datos.
+2. Implementar sistemas distribuidos como **BigQuery**, que escala automáticamente en procesamiento y almacenamiento.
+3. Combinar con servicios como **GKE** para contenedores o **Cloud Run** para cargas serverless.
+4. Supervisar el uso con **Cloud Monitoring** y ajustar configuraciones según las métricas.
+
+---
+
+#### **Pregunta 7: ¿Qué pasos tomarías para diseñar un plan de recuperación ante desastres en GCP?**
+
+**Respuesta:**
+
+1. Configurar backups regulares para servicios críticos como Cloud SQL y BigQuery.
+2. Usar **replicación multirregional** en Cloud Storage para garantizar la disponibilidad de datos.
+3. Definir un **Recovery Time Objective (RTO)** y un **Recovery Point Objective (RPO)** adecuados.
+4. Implementar un plan de failover utilizando herramientas como **Cloud Spanner** o configuraciones de alta disponibilidad en Cloud SQL.
+
+---
+
+#### **Pregunta 8: ¿Cómo garantizarías una gobernanza de datos efectiva en GCP?**
+
+**Respuesta:**
+
+1. Cumplir con normativas locales e internacionales como GDPR o HIPAA.
+2. Implementar **cifrado de datos en reposo** (AES-256) y en tránsito (TLS).
+3. Usar **Cloud DLP** para identificar y proteger datos sensibles.
+4. Definir roles y permisos con IAM y aplicar etiquetas para clasificación de datos.
+
+---
+
+#### **Pregunta 9: ¿Qué herramientas usarías para replicar datos entre entornos locales y GCP?**
+
+**Respuesta:**
+
+1. Usar **Database Migration Service** para migrar bases de datos relacionales.
+2. Utilizar **Data Transfer Service** para mover datos hacia Cloud Storage.
+3. Implementar soluciones de replicación en tiempo real con herramientas como **Datastream**.
+4. Evaluar la arquitectura y los procesos actuales antes de seleccionar herramientas específicas.
+
+---
+
+#### **Pregunta 10: ¿Cómo administrarías máquinas virtuales en Compute Engine?**
+
+**Respuesta:**
+
+1. Seleccionar el tipo de máquina adecuado (series E2, N2, etc.) según los requerimientos de recursos.
+2. Configurar **grupos de instancias administrados** para escalar automáticamente.
+3. Usar **snapshots** para respaldos y restauración rápida de discos.
+4. Configurar etiquetas y redes específicas para las VMs, asegurando una segmentación adecuada.
+5. Implementar políticas de firewall y verificar la seguridad con **Cloud Armor**.
+
+---
+
+#### **Pregunta 11: ¿Cuándo utilizarías App Engine en lugar de Compute Engine o Cloud Run?**
+
+**Respuesta:**
+
+1. Usar **App Engine** para aplicaciones web o APIs que requieren despliegues rápidos y administración mínima.
+2. Optar por App Engine cuando se busca escalabilidad automática integrada y no es necesario acceso directo al sistema operativo.
+3. Elegir **Cloud Run** para aplicaciones containerizadas y **Compute Engine** para necesidades altamente personalizadas o control absoluto del entorno.
+
+---
+
+#### **Pregunta 12: ¿Qué estrategias aplicarías para optimizar costos en Cloud Storage?**
+
+**Respuesta:**
+
+1. Usar la clase de almacenamiento adecuada (Standard, Nearline, Coldline, o Archive) según la frecuencia de acceso.
+2. Configurar **lifecycle rules** para mover datos a clases más económicas automáticamente.
+3. Monitorear el uso con **Cloud Monitoring** y revisar el almacenamiento no utilizado.
+
+---
+
+#### **Pregunta 13: ¿Cómo implementarías redes virtuales y segmentación en GCP?**
+
+**Respuesta:**
+
+1. Crear redes VPC personalizadas con subredes específicas.
+2. Configurar reglas de firewall para limitar el tráfico entrante y saliente.
+3. Usar **Cloud NAT** para acceso seguro a internet desde instancias privadas.
+4. Implementar **VPC peering** o **Interconnect** para conectar redes híbridas o multicloud.
+
+---
+
+#### **Pregunta 14: ¿Qué rol juega Kubernetes en la arquitectura en la nube?**
+
+**Respuesta:**
+
+1. Proporciona una plataforma para gestionar aplicaciones containerizadas.
+2. Facilita la escalabilidad automática mediante **Horizontal Pod Autoscaler**.
+3. Permite despliegues continuos y recuperación rápida de fallos.
+4. Integrado con **GKE** para una gestión simplificada en GCP.
+
+---
+
+#### **Pregunta 15: ¿Cómo manejarías la continuidad del negocio y la recuperación en entornos críticos?**
+
+**Respuesta:**
+
+1. Configurar zonas y regiones redundantes para alta disponibilidad.
+2. Implementar planes de failover y pruebas regulares de recuperación.
+3. Asegurar backups automáticos de datos críticos.
+4. Usar herramientas como **Cloud Operations Suite** para supervisar y responder ante incidentes.
+
+---
+
+#### **Pregunta 16: ¿Qué es Terraform y cómo lo usarías en GCP?**
+
+**Respuesta:**
+
+1. **Terraform** permite la gestión de infraestructura como código (IaC).
+2. Facilita el despliegue reproducible de recursos como VMs, redes, y bases de datos en GCP.
+3. Permite versionar la infraestructura y manejar cambios a través de pipelines CI/CD.
+4. Alternativamente, usar **Cloud Deployment Manager** para manejar plantillas de recursos nativos.
+
+---
+
+#### **Pregunta 17: ¿Qué características tiene Google Compute Engine y cuándo lo usarías?**
+
+**Respuesta:**
+
+1. Google Compute Engine proporciona máquinas virtuales configurables para cargas de trabajo personalizadas.
+2. Usar Compute Engine para ejecutar aplicaciones que requieren acceso directo al sistema operativo o bibliotecas específicas.
+3. Configurar grupos de instancias administrados para escalar automáticamente según la demanda.
+4. Integrar con discos persistentes y snapshots para recuperación de datos.
+
+---
+
+#### **Pregunta 18: ¿Cuándo elegirías Google App Engine sobre otros servicios?**
+
+**Respuesta:**
+
+1. Elegir App Engine para aplicaciones web donde se busca un entorno serverless con escalabilidad automática.
+2. Usar App Engine cuando no se necesita acceso directo al sistema operativo ni configuraciones complejas.
+3. Es ideal para aplicaciones con arquitecturas basadas en microservicios.
+
+---
+
+#### **Pregunta 19: ¿Qué es Google Cloud Run y cuándo es útil?**
+
+**Respuesta:**
+
+1. Google Cloud Run permite ejecutar contenedores de forma serverless.
+2. Es útil para cargas de trabajo event-driven o aplicaciones de corta duración.
+3. Escala automáticamente de 0 a N instancias, reduciendo costos para aplicaciones poco usadas.
+4. Integra con Pub/Sub, Firestore y otros servicios GCP para aplicaciones modernas.
+
+---
+
+#### **Pregunta 20: ¿Qué ventajas ofrece Google Kubernetes Engine (GKE)?**
+
+**Respuesta:**
+
+1. GKE proporciona una plataforma completamente gestionada para ejecutar clústeres de Kubernetes.
+2. Simplifica el escalado automático de pods y nodos según las métricas de uso.
+3. Permite la integración con sistemas de CI/CD para despliegues rápidos y confiables.
+4. Proporciona herramientas avanzadas de monitoreo e integración con Cloud Operations.

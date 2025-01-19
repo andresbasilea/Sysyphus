@@ -29,3 +29,7 @@
 
 ### ETL Processing on Google Cloud Using Dataflow and BigQuery
 [[ETL Processing on Google Cloud Using Dataflow and BigQuery]]
+
+### Migrate On-Premises MySQL to Cloud SQL
+[[Migrating On-premises MySQL Using a Continuous Database Migration Service Job]]
+

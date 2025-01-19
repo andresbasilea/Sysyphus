@@ -117,3 +117,30 @@ Hacer situaciones tipo STAR. Situacion tarea accion resultado
 - Entiendo entonces que el esquema sería home office y asistir a oficinas en CDMX o Monterrey cada cierto tiempo?
 - Cuál sería el nombre del puesto final en accenture?
 - Entraría a un equipo de consultores de accenture donde casi todos están en monterrey, verdad?
+
+
+
+Llamada con Escarlet de accenture: 17 enero 11:45
+Tienen una cuota con Accenture de gente que se tiene que mudar a monterrey. 
+
+
+
+
+
+
+
+**Accenture** es una multinacional líder en servicios profesionales, enfocada en ofrecer **consultoría, tecnología, outsourcing** y soluciones innovadoras. Fundada en 1989, tiene presencia en más de **120 países** y trabaja con empresas de diversas industrias para ayudarlas a **transformarse digitalmente, optimizar operaciones y adoptar nuevas tecnologías**.
+
+Está dentro de las fortune global 500 y tiene actualmente más de 700 mil empleados. 
+
+### **Áreas principales de Accenture**:
+
+1. **Consultoría**: Estrategias empresariales y asesoramiento para mejorar la eficiencia.
+2. **Tecnología**: Implementación de soluciones de TI, desarrollo de software y adopción de tecnologías emergentes como IA, blockchain y cloud computing.
+3. **Operaciones**: Externalización de procesos empresariales (BPO) y gestión de servicios.
+4. **Digital**: Innovación y transformación digital para mejorar la experiencia del cliente y optimizar negocios.
+5. **Estrategia e Industria**: Soluciones específicas para sectores como salud, finanzas, telecomunicaciones, entre otros.
+
+Con un enfoque en la sostenibilidad, inclusión y la innovación, Accenture es un socio clave para empresas que buscan mantenerse competitivas en un mercado global.
+
+

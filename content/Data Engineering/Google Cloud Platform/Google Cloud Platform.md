@@ -23,6 +23,9 @@
 ### Managed Spark with Cloud Dataproc
 [[Managed Spark with Cloud Dataproc]]
 
+### Migrate to Google Cloud
+[[Migrate to Google Cloud]]
+
 ### NoSQL Data using Cloud Bigtable
 [[NoSQL Data using Cloud Bigtable]]
 

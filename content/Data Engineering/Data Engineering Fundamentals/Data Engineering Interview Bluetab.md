@@ -88,12 +88,12 @@ The aspects I find least fulfilling about my current position are the limited op
 
 **Conocimientos**
 
-- [x] Compute Engine 
-- [x] App Engine
-- [x] Cloud Storage 
-- [x] BigQuery,
-- [x] Arquitectura de nube, 
-- [x] Incluyendo redes, virtualización
+- [ ] Compute Engine 
+- [ ] App Engine
+- [ ] Cloud Storage 
+- [ ] BigQuery,
+- [ ] Arquitectura de nube, 
+- [ ] Incluyendo redes, virtualización
 - [ ] Identidad, seguridad, business continuity 
 - [ ] Recuperación de desastres y gobernanza de datos.
 - [ ] Docker y Kubernetes.
@@ -119,6 +119,8 @@ The aspects I find least fulfilling about my current position are the limited op
 | GKE Google Kubernetes Engine | Managed Kubernetes cluster for<br>running Docker containers (with autoscaling). It was called Google Container Engine<br>(GKE). Comparable to AWS EC2 Container Service (ECS & EKS).<br>Integration with IAM<br>When you create a cluster,Google<br>automatically creates GCE instances (production cluster should have 3+ nodes, to<br>handle failures).                                                                                                         |
 | Google App Engine            | Platform as a Service (PaaS) that<br>takes your code and runs it (similar to AWS Elastic Beanstalk or Heroku). Runs<br>almost any language. Auto-scaled based on load (NON FLEX mode can turn off last<br>instance when no traffic).                                                                                                                                                                                                                              |
 | Google Cloud Run Functions   | Runs code in response to an event<br>(can be programmed in Node.js, Python, Java, Go). Functions as a Service (FaaS),<br>often referred to as Serverless. Similar to Lambda in AWS. Pay for CPU and RAM<br>assigned to function, per 100ms(min 100ms). Massively scalable (horizontally) - can<br>run many copies when needed. Useful when requests change a lot (not sure how many<br>people will use it), like chatbots, message processors, IoT or Automation. |
+
+![[Pasted image 20250114101444.png]]
 
 ##### GCP Storage Services
 
@@ -155,7 +157,6 @@ Service Accounts are created for a specific non-human task requiring granular
 authorization. Identity can be assumed by an application/workload... in the form of
 keys, which can be easily rotated.
 GCP services assume service account identity.
-
 
 Fault tolerance and loosely coupling with PUBSUB
 
@@ -226,9 +227,9 @@ DR patterns are considered to be *cold*, *warm*, or *hot*. These patterns indica
 
 
 ## My Questions
-- What are the expectations for the first months in the role and what are the benchmarks for evaluating success?
-- Who will I be working with?
-- What does a typical day look like in this job?
+- En qué tipo de proyectos estaría trabajando, principalmente? 
+- Cuáles son las expectativas y métricas para evaluar el éxito en los primeros meses de trabajo? 
+- Cómo está conformado el equipo de consultores que apoya en proyectos de ingeniería de datos con GCP? 
 
 
 

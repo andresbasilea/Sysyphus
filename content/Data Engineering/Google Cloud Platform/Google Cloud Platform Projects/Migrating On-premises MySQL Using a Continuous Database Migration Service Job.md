@@ -105,7 +105,7 @@ Go to Databases -> SQL. Click on the instance ID called **mysql-cloudsql**. In t
 	- if prompted for password, use the CloudSQL password you created previously. 
 
 >[!error] Public IP
->I had not configured a Public IP connection to the destination database. Because of this, the previous command would not allow me to connect to the destination database. If this happens to you, go to the SQL destination instance overview and click on edit to add the Public IP option. 
+>I had not configured an IP connection to the destination database. Because of this, the previous command would not allow me to connect to the destination database. If this happens to you, go to the SQL destination instance overview and click on edit to add the IP. 
 >![[Pasted image 20250113200206.png]]
 
 #### Review the data in the Cloud SQL for MySQL instance

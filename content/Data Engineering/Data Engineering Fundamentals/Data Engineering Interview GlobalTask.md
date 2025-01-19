@@ -1,23 +1,35 @@
 ---
 draft: true
 ---
-## Useful URLs
-- https://medium.com/@nishasreedharan/data-engineer-interview-preparation-complete-guide-98a9d16f6889
 
-![[Pasted image 20241129213028.png]]
-![[Pasted image 20241202131216.png]]
+### We are Global Task
 
+We have over 15 years of experience in developing digital solutions that transform businesses.
+Clientes en Mexico, Estados unidos y argentina
+Son una empresa de servicios profesionales, llevando soluciones tecnológicas a distintos sectores como lo son fintech, ecommerce, compliance y más. 
 
+- estados unidos mexico argentina 
+- IA ML Big Data 
 
-### Software One
+Hacen staff augmentation o outsorcing
+Whitehub IA Generativa de GlobalTask. 
 
-Of course! SoftwareOne is a global provider of software solutions and cloud technology services, headquartered in Switzerland. It was founded in 2000 and now has a strong global presence with over 9,000 employees. The company focuses on delivering end-to-end technology services, helping clients with their digital transformation, modernizing their IT strategies, and optimizing operational efficiency. I also understand that SoftwareOne emphasizes ensuring high-quality service while supporting businesses in managing and optimizing their software and cloud investments. It’s impressive how the company integrates innovation with customer-centric solutions.
+Staff augmentation: Clientes. 
+## Puesto
+## Acerca del empleo
 
-SAM - It involves the processes and technologies for managing and optimizing the purchase, deployment, maintenance, utilization and disposal of software applications within an organization. 
+En Global Task buscamos un **Data Engineer Trainee / Junior** interesado en desarrollar su carrera en ingeniería de datos, para sumarse a nuestro equipo en el área de negocios de importantes entidades!
+**Requisitos:**
 
-1985: Softwarepipeline
-Laura reyes sería mi jefa
+- Estudiante avanzado o egresado de **carreras de sistemas, informática o afines.**- Conocimientos básicos de **Python** (deseable).- Interés en ingeniería de datos aplicada al análisis de negocios.- Habilidad para trabajar en equipo y disposición para aprender en un entorno dinámico. 
 
+**Responsabilidades:**
+
+- Apoyar en el desarrollo de **procesos ETL** para la carga y transformación de datos relevantes para el área de negocios.- Colaborar en la **integración de datos** de distintas fuentes para mejorar la visibilidad y análisis de información.- Realizar pruebas y validaciones para asegurar la precisión y calidad de los datos.- Asistir en la creación de **reportes y dashboards** que aporten valor a la toma de decisiones.- Contribuir a la documentación técnica y operativa de procesos de datos.
+
+**Contratacion**
+
+- Modalidad #contractor.- Rate en #USD.- Contrato inicial de 6 meses, con posibilidad de renovación.- Horario: lunes a viernes de 9:00 a 19:00 hrs.- #Presencial - Ubicación: Santa Fe, Cuajimalpa de Morelos, CDMX / Ajusco, CDMX.
 
 
 ### Present Yourself
@@ -26,7 +38,7 @@ Hi! My name is Andrés Basile, I am 25 years old. I was born in Argentina, but I
 
 I currently work as a Presales Engineer which means that I am the middleground between the technical specialists and the commercial area of the company I work on. The company is called Edicom, which is a technology and SaaS solutions provider based off in Valencia, Spain,  where I lived and worked for a couple of months this year. My work mainly consists on translating business requirements into technical architectures. or transforming the need into a design which fits our current technical platform. 
 
-At my time in college I gained foundational knowledge in software development, data engineering, and Artificial Intelligence, and I have also proactively taken steps to grow my expertise by developing my own projects, taking courses and consolidating my knowledge with certifications such as the Google cloud Professional data engineer certification. 
+At my time in college I gained foundational knowledge in software development, data engineering, and Artificial Intelligence, and I have also proactively taken steps to grow my expertise by developing my own projects, taking courses and consolidating my knowledge with certifications such as the Google cloud Professional data engineer certification. I think what drives me to develop my own projects and be on the lookout for new opportunities to grow and learn is that I am a curious, self motivated person that has the ability to take initiative without waiting for direction. 
 
 I am also a great advocate of what is called "learning in public", I currently write blog entries on my personal website, trying to transmit my experience and knowledge, and I think this translates perfectly into a business environment where it is crucial to be able to communicate our learnings, our wrongdoings and do so effectively to try and build a team of peers that can adapt and overcome any type of project. 
 
@@ -59,6 +71,33 @@ The aspects I find least fulfilling about my current position are the limited op
 ### Pros of current job
 
 
+##### Security
+
+**Service accounts:** Help implement better security. Identity & Access Management works with Members and
+Roles. Members can be a specific person, group of people or a service account on
+the domain 12345@cloudservices.gserviceaccount.com. Roles can be, for example,
+Instance Admin, Pub/Sub Publisher, Storage Object Viewer, etc.
+Service Accounts are created for a specific non-human task requiring granular
+authorization. Identity can be assumed by an application/workload... in the form of
+keys, which can be easily rotated.
+GCP services assume service account identity.
+
+
+Fault tolerance and loosely coupling with PUBSUB
+
+Integrate security into CI/CD PIPELINES: Automate security checks and vulnerability scanning within your development and deployment processes. 
+
+Servicio DLP: Ayuda a descubrir, clasificar y proteger informacion sensible
+
+KMS: Manejo de claves criptograficas para los servicios en la nube. 
+
+**medidas de seguridad dependerán:**
+- requerimientos de compliance
+- Tipos de datos
+- Complejidad de la arquitectura
+- Budget. 
+
+ISO 27001
 
 
 
@@ -94,7 +133,63 @@ Adoptaxolotl add changes
 | Data Lakehouse |            |
 
 
-## Data Modeling
+## Snowflake y Databricks
+
+
+**Snowflake** y **Databricks** son plataformas de análisis de datos en la nube, pero tienen enfoques y casos de uso diferentes:
+
+---
+
+### **Snowflake**
+
+Es una plataforma de **almacenamiento y análisis de datos en la nube**.  
+**Características principales**:
+
+1. **Almacenamiento de datos**: Actúa como un _data warehouse_ (almacén de datos) para almacenar grandes volúmenes de datos estructurados y semiestructurados (como JSON o Parquet).
+2. **Escalabilidad**: Escala automáticamente el almacenamiento y el poder de procesamiento según las necesidades.
+3. **SQL nativo**: Ideal para consultas SQL estándar. Es fácil de usar para analistas y equipos de BI (Business Intelligence).
+4. **Integraciones**: Compatible con muchas herramientas de ETL/ELT y plataformas de análisis como Tableau o Power BI.
+5. **Modelo de precios**: Paga solo por lo que consumes en almacenamiento y computación.
+
+**Usos comunes**:
+
+- Almacenes de datos empresariales.
+- Integración y consulta de grandes volúmenes de datos.
+- Informes y dashboards.
+
+---
+
+### **Databricks**
+
+Es una plataforma de **procesamiento y análisis de datos** basada en Apache Spark.  
+**Características principales**:
+
+1. **Procesamiento de datos**: Ideal para grandes volúmenes de datos en tiempo real o por lotes (batch processing).
+2. **Machine Learning (ML)**: Soporte nativo para crear y entrenar modelos de ML usando lenguajes como Python, R o Scala.
+3. **Data Lakehouse**: Combina un data lake y un data warehouse para manejar datos estructurados y no estructurados.
+4. **Notebooks colaborativos**: Facilita la colaboración entre equipos de datos mediante notebooks interactivos.
+5. **Integraciones**: Compatible con herramientas como MLflow para gestionar experimentos y modelos.
+
+**Usos comunes**:
+
+- Análisis avanzado y procesamiento de big data.
+- Desarrollo de modelos de machine learning.
+- Integración con Data Lakes para análisis y almacenamiento.
+
+---
+
+### **Diferencias clave**:
+
+|**Aspecto**|**Snowflake**|**Databricks**|
+|---|---|---|
+|**Tipo de datos**|Datos estructurados y semiestructurados|Datos estructurados y no estructurados|
+|**Uso principal**|Consultas SQL y BI|Procesamiento avanzado y ML|
+|**Escalabilidad**|Totalmente gestionada, simple de usar|Más técnica, requiere experiencia|
+|**Lenguajes soportados**|SQL|Python, Scala, R, SQL, Java|
+
+Ambas plataformas pueden integrarse para aprovechar sus fortalezas combinadas.
+
+
 
 
 
@@ -312,6 +407,18 @@ return 0
 
 ## My Questions
 - What are the expectations for the first months in the role and what are the benchmarks for evaluating success?
+- Generalmente trabajan 100% presencial todo el tiempo, o tienen opción de hacer HO después de un determinado tiempo en la empresa? 
 - Who will I be working with?
 - What does a typical day look like in this job?
+
+
+- Empleador es la empresa para la que entre. Todo depende del empleador final. 
+- Pagan en dólares. TIene que ser cuenta a nombre de uno mismo. Billeteres virtuales. Recibir dolares sin intermediarios. 
+- 6 meses con global task. Si todo sale bien, el contrato se va renovando. 
+- Se puede renovar con el empleador directamente
+- Algorithia. Es una empresa de Grupo Salinas. 
+- Servicio de transporte en distintos puntos de la ciudad ofrecidos por algorithia. 
+- Se puede trabajar con el equipo cambiar el horario. 
+- Proceso -> ejercicio tecnico -> y entrevista con Algorithia. 
+- 
 

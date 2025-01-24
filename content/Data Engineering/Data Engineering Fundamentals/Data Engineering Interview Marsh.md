@@ -4,8 +4,11 @@ draft: true
 ## Useful URLs
 - https://medium.com/@nishasreedharan/data-engineer-interview-preparation-complete-guide-98a9d16f6889
 
-![[Pasted image 20241129213028.png]]
-![[Pasted image 20241202131216.png]]
+![[Pasted image 20250123075306.png]]
+![[Pasted image 20250123075336.png]]
+![[Pasted image 20250123075354.png]]
+
+Right now I am about to start a new position as a Google Cloud Platform Data Engineer and I will be working for an international bank. I am thrilled and really happy to be able to have this interview before that, because, as you may know, I am really excited about the opportunity to work at Marsh. 
 
 
 
@@ -17,17 +20,21 @@ La empresa cuenta actualmente con más de 85 mil empleados y presencia de client
 
 Creo que actualmente es parte de las empresas en el ranking de Fortune 500. 
 
+It is an international professional services company, based in New York and with more than 100 years of experience. It is made up of 4 main companies: Marsh, Guy Carpenter, Mercer and Oliver Wyman. They have businesses such as insurance brokers, risk management, talent management, and management consulting. 
+
+The company currently has more than 85 thousand employees and a presence of clients in more than 130 countries. 
+
+I believe it is currently part of the Fortune 500 ranking.
+
 ### Present Yourself
 
 Hi! My name is Andrés Basile, I am 25 years old. I was born in Argentina, but I have been living in Mexico for almost my whole life. I am a Computer Engineer passionate about data, data engineering and Artificial Intelligence, topics which I specialized on during my time at college at the National Autonomous University of Mexico, from which I graduated as the second best average of my generation. 
 
-I currently work as a Presales Engineer which means that I am the middleground between the technical specialists and the commercial area of the company I work on. The company is called Edicom, which is a technology and SaaS solutions provider based off in Valencia, Spain,  where I lived and worked for a couple of months this year. My work mainly consists on translating business requirements into technical architectures. or transforming the need into a design which fits our current technical platform. 
+My most recent work experience is as an International Presales Data Engineer which means that I am the middleground between the technical specialists and the commercial area of the company I work on. The company is called Edicom, which is a technology and SaaS solutions provider based off in Valencia, Spain,  where I lived and worked for a couple of months last year. My work mainly consists on translating business requirements into technical architectures. or transforming the need into a design which fits our  technical platform. 
 
 At my time in college I gained foundational knowledge in software development, data engineering, and Artificial Intelligence, and I have also proactively taken steps to grow my expertise by developing my own projects, taking courses and consolidating my knowledge with certifications such as the Google cloud Professional data engineer certification. I think what drives me to develop my own projects and be on the lookout for new opportunities to grow and learn is that I am a curious, self motivated person that has the ability to take initiative without waiting for direction. 
 
 I am also a great advocate of what is called "learning in public", I currently write blog entries on my personal website, trying to transmit my experience and knowledge, and I think this translates perfectly into a business environment where it is crucial to be able to communicate our learnings, our wrongdoings and do so effectively to try and build a team of peers that can adapt and overcome any type of project. 
-
-Looking ahead, I am ready to step into a full data egineering or data platform engineer role, where I can continue to grow my technical skills and eventually become an expert in the field. 
 
 I am very happy of being here and having the opportunity to continue to grow professionally and as a person in such a prestigious company as Marsh McLennan. 
 
@@ -204,6 +211,24 @@ Liga para que me postule a la posición.
 |**Lenguajes soportados**|SQL|Python, Scala, R, SQL, Java|
 
 Ambas plataformas pueden integrarse para aprovechar sus fortalezas combinadas.
+
+
+![[Pasted image 20250122193928.png]]
+
+![[Pasted image 20250122193920.png]]
+
+![[Pasted image 20250122193900.png]]
+
+
+
+
+
+
+
+
+
+
+
 
 
 

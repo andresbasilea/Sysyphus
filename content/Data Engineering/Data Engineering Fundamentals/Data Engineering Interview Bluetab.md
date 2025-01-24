@@ -488,3 +488,41 @@ Bluetab: consultoría:
 2. Simplifica el escalado automático de pods y nodos según las métricas de uso.
 3. Permite la integración con sistemas de CI/CD para despliegues rápidos y confiables.
 4. Proporciona herramientas avanzadas de monitoreo e integración con Cloud Operations.
+
+
+
+
+
+
+REVISIÓN CARTA OFERTA
+
+
+- ¿Cuál sería el horario final? 
+- En algún lado se asegura la modalidad de trabajo? 
+
+- El primer día de trabajo, me presentaría directamente con BBVA? o con ustedes? 
+
+- Una vez firmando la carta oferta, ya está asegurada la posición y podría renunciar a mi empleo actual, verdad? Cuándo haríamos la firma del contrato final?
+- La constancia laboral de último empleo, qué documento es?
+- Cuentan con estacionamiento en las oficinas? 
+
+
+
+Los documentos ya prácticamente los tengo todos listos
+Las pruebas que me enviaste hace un rato, ya avancé bastante, pero todavía me falta un poco. 
+
+
+Hola, Les! 
+Te pedí este espacio para platicar porque durante la semana pasada se acercaron conmigo de la empresa Bluetab para participar en un proyecto de Inteligencia artificial generativa en el banco BBVA. Me llamaron el martes pasado y me entrevistaron en esos días. La verdad fue muy repentino todo. He decidido que voy a tomar la oferta que me están haciendo y que voy a renunciar a edicom. 
+
+
+
+
+¡Hola a todos! Mi nombre es Andrés Basile. Tengo 25 años y soy ingeniero en computación de la UNAM. 
+¡Estoy muy emocionado de unirme a Bluetab! 
+Un poquito más sobre mí: Me encanta la música y tocar la guitarra, disfruto del deporte, caminar en la naturaleza y, por supuesto, compartir buenos momentos con amigos. 
+¡Espero aprender mucho, aportar lo mejor de mí y conocerlos a todos!  ![🚀](https://fonts.gstatic.com/s/e/notoemoji/16.0/1f680/32.png)  
+
+  
+
+Saludos,

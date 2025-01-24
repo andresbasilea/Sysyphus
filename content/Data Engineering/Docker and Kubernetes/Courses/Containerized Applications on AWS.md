@@ -146,7 +146,7 @@ Service for deploying and scaling web applications.
 AWS Elastic Beanstalk automatically handles the deployment and configuration of EC2 instances, load balancer, autoscaling, and health monitoring resources in your account. 
 
 #### What’s the difference between Amazon Elastic Compute Cloud (Amazon EC2) and containers? 
-Amazon EC2 is an AWS service that provides virtual machines on demand. Containers can be hosted on top of Amazon EC2, which you will learn more about in Week 2 of the course.
+Amazon EC2 is an AWS service that provides virtual machines on demand. Containers can be hosted on top of Amazon EC2. 
 
 ## Microservices and the Corporate Directory Application
 

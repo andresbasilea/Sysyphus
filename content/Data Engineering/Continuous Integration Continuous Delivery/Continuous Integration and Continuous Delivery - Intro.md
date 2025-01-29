@@ -62,6 +62,29 @@ Different LOB applications within a company might use **different** CI/CD tools.
 
 #### Main CI Features 
 - **Short-lived branches**: A playground for developers to create and test new features. Meant to be deleted after being merged. Reduces drift and reduces parallel changes. 
-- **Frequent pull requests**: Created for a specific feature. Merged by maintainers/owners. NO one should be able to approve their own merge request. Small pieces of a bigger puzzle. 
-- **Automated CI tools**: 
+- **Frequent pull requests**: Created for a specific feature. Merged by maintainers/owners. NO one should be able to approve their own merge request. Small pieces of a bigger puzzle. This allows frequent feedback from increased collaboration, faster reaction to changes, reduced management risk. 
+- **Automated CI tools**: Uses webhooks to monitor events. This is achieved using tools like Github Actions, Circle CI, Jenkins CI, etc. Automation tools ensure your code is doing what you expected.
+
+#### Benefits of Continuous Integration
+- Faster code-reaction time
+- Reduced code integration risk
+- Higher quality of code
+- Code in version control works. The code in Git works because you ran Continuous Integration tests. 
+
+### Social Coding
+
+- Open source for inner source
+	- Coding as a community in an enterprise environment. 
+- All repositories are public
+- Everyone is encouraged to contribute
+- Anarchy is controlled via pull requests
+
+You open an issue and assign it to yourself, you discuss the new feature with the repo owner and agree to develop it, you fork the repo, create a branch and make your changes. Finally, you issue a pull request when you are ready to review and merge your work back into the main project. 
+
+- Repo owners are in full control
+	- Can ask for changes 
+	- Can ask for more test cases to be written
+- Developers are considered as equal team members. 
+- Developers can leverage another team's code
+- Company saves money because code is reused. 
 

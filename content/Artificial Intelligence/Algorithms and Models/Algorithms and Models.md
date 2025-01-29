@@ -3,3 +3,18 @@
 
 ### Model Evaluation Metrics
 [[Model Evaluation Metrics]]
+
+### AI Frameworks
+[[AI Frameworks]]
+
+### Fuzzy Logic
+[[Fuzzy Logic]]
+
+### Genetic Algorithms and Optimization
+[[Genetic Algorithms and Optimization]]
+
+### Optical Character Recognition
+[[Optical Character Recognition]]
+
+### Reinforcement Learning
+[[Reinforcement Learning]]

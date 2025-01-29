@@ -53,3 +53,15 @@ Different LOB applications within a company might use **different** CI/CD tools.
 - Puppet
 - SaltStack
 
+
+### What is Continuous Integration?
+
+- Automation process. 
+- Allows developers to integrate their work
+- Ensures that the software continues to work properly after being pushed. 
+
+#### Main CI Features 
+- **Short-lived branches**: A playground for developers to create and test new features. Meant to be deleted after being merged. Reduces drift and reduces parallel changes. 
+- **Frequent pull requests**: Created for a specific feature. Merged by maintainers/owners. NO one should be able to approve their own merge request. Small pieces of a bigger puzzle. 
+- **Automated CI tools**: 
+

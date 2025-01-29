@@ -28,6 +28,10 @@ Aspects of Data Engineering:
 
 ### AWS
 [[AWS]]
+
+### Continuous Integration and Continuous Delivery
+[[Continuous Integration Continuous Delivery]]
+
 ### Data Engineering Fundamentals
 [[Data Engineering Fundamentals]]
 

@@ -18,3 +18,9 @@
 
 ### Reinforcement Learning
 [[Reinforcement Learning]]
+
+### Support Vector Machine (SVM)
+[[Support Vector Machine (SVM)]]
+
+### Decision Trees
+[[Decision Trees]]

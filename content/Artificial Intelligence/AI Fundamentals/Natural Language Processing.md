@@ -26,6 +26,8 @@ When a user inputs a message, an NLP model (like a chatbot) will:
 
 ### Preprocessing (StopWords, Lemmatization, Word Embeddings)
 
+
+
 ### Large Language Models (LLMs)
 
 ### Transformers

@@ -1,0 +1,2 @@
+
+AWS Fargate is a serverless compute platform for your Amazon Elastic Container Service (Amazon ECS) and Amazon Elastic Kubernetes Service (Amazon EKS) clusters. You can use Fargate instead of deploying your Amazon ECS tasks and Amazon EKS Pods to Amazon Elastic Compute Cloud (Amazon EC2) instances in your account. With Fargate, you don’t need to maintain and deploy servers. In addition, you pay only for the resources you use. Your Pods and tasks are run in an isolated runtime environment for improved security.

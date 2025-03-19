@@ -1,0 +1,2 @@
+#### AWS Lambda
+AWS Lambda is a serverless compute service. You hand the code to Lambda and the code is run on AWS infrastructure. You don't worry about the infrastructure or servers running the code. 

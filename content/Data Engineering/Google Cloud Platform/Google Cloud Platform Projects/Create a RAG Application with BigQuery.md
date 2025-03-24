@@ -43,8 +43,6 @@ We will  grant the service account the necessary IAM permissions to use BigQuery
 >[!danger]
 >Don't forget to enable the Vertex AI API:
 ![[Pasted image 20250323202400.png]]
- 
-
 
 
 ### Generating embeddings

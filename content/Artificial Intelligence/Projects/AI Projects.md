@@ -7,6 +7,10 @@
 
 [[Image Generation from Music Lyrics]]
 
+
+### Retrieval Augmented Generation using BigQuery
+[[Create a RAG Application using BigQuery]]
+
 ### Correlation of the Economic Freedom Index with other Indices
 
 [[Correlation of the Economic Freedom Index with other Indices]]

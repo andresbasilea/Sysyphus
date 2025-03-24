@@ -7,3 +7,5 @@
 ### Migrating On-premises MySQL using Database Migration Service
 [[Migrating On-premises MySQL Using a Continuous Database Migration Service Job]]
 
+### Create a RAG Application with BigQuery
+[[Create a RAG Application with BigQuery]]

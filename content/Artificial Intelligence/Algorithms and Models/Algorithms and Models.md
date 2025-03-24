@@ -19,6 +19,8 @@
 ### Reinforcement Learning
 [[Reinforcement Learning]]
 
+### Retrieval Augmented Generation
+[[Retrieval Augmented Generation]]
 ### Support Vector Machine (SVM)
 [[Support Vector Machine (SVM)]]
 

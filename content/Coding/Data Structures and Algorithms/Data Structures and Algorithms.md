@@ -1,0 +1,4 @@
+
+### Linked Lists
+[[Linked Lists]]
+

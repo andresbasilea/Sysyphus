@@ -9,3 +9,6 @@
 
 ### Create a RAG Application with BigQuery
 [[Create a RAG Application with BigQuery]]
+
+### Machine Learning on Dataproc Apache Spark Cluster
+[[Machine Learning on Dataproc Apache Spark Cluster]]

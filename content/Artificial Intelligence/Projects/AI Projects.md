@@ -1,4 +1,6 @@
 
+### AI Agents in LangGraph
+[[AI Agents in LangGraph]]
 ### Naive Bayes Image Classifier
 
 [[Naive Bayes Image Classifier]]
@@ -6,7 +8,6 @@
 ### Image Generation from Music Lyrics
 
 [[Image Generation from Music Lyrics]]
-
 
 ### Retrieval Augmented Generation using BigQuery
 [[Create a RAG Application using BigQuery]]
@@ -47,3 +48,6 @@
 ### E-Commerce Sales Forecast
 
 [[E-Commerce Sales Forecast]]
+
+### Logistic Regression using Apache Spark on GCP Dataproc 
+[[Machine Learning on Dataproc Apache Spark Cluster]]

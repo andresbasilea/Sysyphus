@@ -8,3 +8,7 @@
 ### EKS
 [[EKS]]
 
+
+### AWS Certified Machine Learning Engineer Associate
+[[AWS Certified Machine Learning Associate]]
+

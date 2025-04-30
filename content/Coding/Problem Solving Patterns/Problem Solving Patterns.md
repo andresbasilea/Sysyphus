@@ -47,3 +47,4 @@ Now, let's start talking about the problem solving patterns:
 - An indication that a problem can be solved using two pointer is when the input follows a predictable dynamic, such as a **sorted array**.
 - An example would be to find palindromes. 
 - Another example would be if a problem asks for a pair of values or a result that can be generated from a pair of values. 
+

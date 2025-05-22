@@ -1,0 +1,14 @@
+- High level AWS account assessment
+- For example, check if you are using root account for your account
+- Check if you have EBS Public Snapshots
+- Analyze your AWS accounts and provides recommendation on 6 categories:
+	- Cost optimization
+	- Performance
+	- Security (access on some checks with Free Tier, others need Business and enterprise support plan)
+	- Fault tolerance
+	- Service limits
+	- Operational Excellence
+- **Business & Enterprise Support plan**
+	- **For full set of checks**
+	- **Programmatic Access using AWS Support API.** 
+

@@ -27,7 +27,7 @@
 	- OpenSearch
 	- Amazon S3 (exports)
 - Logs are encrypted by default
-- Can setup KMS-based encryption with your own keys
+- Can setup KMS-based encryption with your own keys. To ensure your Logs are encrypted with specific KMS key, you should configure **CloudWatch Logs Encryption**
 
 CloudWatch Logs - Sources
 - SDK, CloudWatch Logs Agent, CloudWatch Unified Agent

@@ -1,0 +1,2 @@
+- Automatically extracts text, handwriting, and data from documents using AI and ML
+- Extract data from forms, tables, pdf, images

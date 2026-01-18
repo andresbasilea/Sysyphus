@@ -1,0 +1,11 @@
+- Volume
+	- Amount or size of data that organizations are dealing with at any given time
+	- Challenges in storing, processing and analyzing high volumes of data
+- Velocity
+	- Speed at which data is generated, collected, and processed
+	- High velocity requires real-time or near-real-time processing capabilities
+	- Rapid ingestion and processing can be critical for certain applications
+- Variety
+	- Refers to the different types, structures and sources of data
+	- Data can be structured, semi-structured or unstructured
+	- Data can come from multiple sources and in various formats

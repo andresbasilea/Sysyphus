@@ -1,0 +1,8 @@
+- It is more about governance and organization
+- Individual teams own "data products" within a given domain
+	- Descentralized data
+- The data products serve various "use cases" around the organization (use cases might have data from different domains)
+- Domain-based data management
+- Federated governance with central standards
+- Lake Formation might be good and Glue for centralized data catalog. 
+- More about data management than specific technologies

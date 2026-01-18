@@ -1,0 +1,9 @@
+- Random sampling
+	- Equal chance 
+	- Good if there is no difference between data points in the dataset
+- Stratified Sampling
+	- Divide population into homogenous groups (strata)
+	- Random sample within each stratum
+	- Ensures representation of each subgroup
+- Others
+	- Systemic (for example, take every third element), Cluster, Convenient

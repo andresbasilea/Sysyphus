@@ -45,4 +45,3 @@ Shows how cash is earned and spent by a company. Complements the balance sheet a
 	- Loans 
 	- Dividends paid
 	- Debt repayments
-

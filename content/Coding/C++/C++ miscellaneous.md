@@ -93,5 +93,37 @@ std::unique_ptr <MyClass> p = std::make_unique<MyClass>(args);
 
 
 
+#### Const vs constexpr
+
+- `const` means that the value of an object cannot be changed after initialization. The value of the initializer may be known at compile-time or runtime. The const object can be evaluated at runtime.
+- `constexpr` means that the object can be used in a constant expression. The value of the initializer must be known at compile-time. The constexpr object can be evaluated at runtime or compile-time.
+
+not fully compatible with `constexpr` (including `std::string`, `std::vector`, and other types that use dynamic memory allocation). For constant objects of these types, either use `const` instead of `constexpr`, or pick a different type that is constexpr compatible (e.g. `std::string_view` or `std::array`).
 
 
+#### Static keyword
+
+The `static` keyword gives a global identifier internal-linkage, which means the identifier can only be used in the file in which it is defined.
+
+However, the static keyword can be used in a local variable to  change its duration from automatic duration to static duration. This means the variable is now created at the start of the program, and destroyed at the end of the program (just like a global variable). As a result, the static variable will retain its value even after it goes out of scope!
+
+
+#### Using
+[[
+]]using is a keyword that creates an alias for an existing data type. When the compiler encounters a type alias name, it will substitute in the aliased type. For example:
+
+
+```C++
+#include <iostream>
+
+int main()
+{
+    using Distance = double; // define Distance as an alias for type double
+
+    Distance milesToDestination{ 3.4 }; // defines a variable of type double
+
+    std::cout << milesToDestination << '\n'; // prints a double value
+
+    return 0;
+}
+```

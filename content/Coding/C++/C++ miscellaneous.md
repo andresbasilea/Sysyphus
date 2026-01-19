@@ -127,3 +127,40 @@ int main()
     return 0;
 }
 ```
+
+
+#### Overloading vs overriding
+
+Function **overloading** allows multiple functions in the same scope to share the same name by having different parameters, while **overriding** allows a derived class to provide a specific implementation for a virtual function already defined in its base class using the same function signature
+
+
+#### lvalue and rvalue
+
+|Feature|Lvalue|Rvalue|
+|---|---|---|
+|**Identity**|Has an identifiable memory address (can take its address using `&`).|Does not have a persistent, accessible memory address.|
+|**Lifespan**|Persists beyond a single expression (e.g., a variable in scope).|Temporary, usually exists only for the duration of the expression that creates it (e.g., a literal, a function's return value by value).|
+|**Assignment**|Can appear on the left side of an assignment operator (`=`) as the destination (e.g., `x = 10;`).|Typically appears on the right side of an assignment (e.g., `int x = 10;`, where `10` is the rvalue).|
+
+Examples
+
+- **Lvalues**:
+    - Variable names (`int x;`, here `x` is an lvalue).
+    - Function calls that return a reference (`int& getVal();`).
+    - Array subscript expressions on an lvalue array (`myArray[0]`).
+- **Rvalues**:
+    - Literals (`10`, `"hello"`).
+    - The result of arithmetic or logical operations (`a + b`, `x < y`).
+    - Function calls that return a non-reference type (`int getVal();`). 
+
+Importance in C++ (Move Semantics)
+
+The distinction between lvalues and rvalues became crucial with the introduction of **move semantics** and **rvalue references** (`&&`) in C++11. 
+
+- **Lvalue references** (`&`) traditionally bind to lvalues. A `const` lvalue reference can, however, bind to an rvalue, preventing its modification.
+- **Rvalue references** (`&&`) are designed to bind specifically to rvalues (temporary objects). This allows the compiler to "steal" resources (like memory from a large vector or string) from the temporary object instead of performing an expensive deep copy, significantly improving performance. 
+
+The standard library function `std::move` is used to explicitly cast an lvalue to an rvalue reference type, indicating to the compiler that the original object's resources can be moved from.
+
+
+
